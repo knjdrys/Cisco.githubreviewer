@@ -1,7 +1,7 @@
 /* =========================================================
    ITN EXAM REVIEWER
    Flashcards + Multiple Choice Quiz
-   OFFLINE / PWA COMPATIBLE
+   Offline + Persistent Mistake Review
    ========================================================= */
 
 let allCards = [];
@@ -15,6 +15,18 @@ let quizIndex = 0;
 let quizScore = 0;
 let quizAnswered = false;
 
+/* =========================================================
+   MISTAKE REVIEW
+   ========================================================= */
+
+let mistakeQuestions = [];
+let mistakeIndex = 0;
+let mistakeScore = 0;
+let mistakeAnswered = false;
+
+const MISTAKE_STORAGE_KEY =
+  "itnMistakeQuestions";
+
 
 /* =========================================================
    HELPER
@@ -26,13 +38,23 @@ function $(id) {
 
 
 function shuffle(array) {
+
   const copy = [...array];
 
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+  for (
+    let i = copy.length - 1;
+    i > 0;
+    i--
+  ) {
+
+    const j =
+      Math.floor(
+        Math.random() * (i + 1)
+      );
 
     [copy[i], copy[j]] =
       [copy[j], copy[i]];
+
   }
 
   return copy;
@@ -40,19 +62,30 @@ function shuffle(array) {
 
 
 function getPriorityLabel(priority) {
-  if (priority === "HIGH") return "🔥 HIGH PRIORITY";
-  if (priority === "MEDIUM") return "🟡 MEDIUM PRIORITY";
+
+  if (priority === "HIGH") {
+    return "🔥 HIGH PRIORITY";
+  }
+
+  if (priority === "MEDIUM") {
+    return "🟡 MEDIUM PRIORITY";
+  }
+
   return "⚪ LOW PRIORITY";
+
 }
 
 
 function getModuleNumber(moduleName) {
-  const match = String(moduleName || "")
-    .match(/^Module\s+[123]/i);
+
+  const match =
+    String(moduleName || "")
+      .match(/^Module\s+[123]/i);
 
   return match
     ? match[0].replace(/\s+/g, " ")
     : "";
+
 }
 
 
@@ -64,21 +97,10 @@ async function loadCards() {
 
   try {
 
-    /*
-      The Service Worker caches this file.
-
-      IMPORTANT:
-      We intentionally do NOT use:
-
-      cache: "no-store"
-
-      because the website needs to be able to
-      retrieve the cached JSON when offline.
-    */
-
-    const response = await fetch(
-      "ITN_Modules_1-3_Flashcards.json"
-    );
+    const response =
+      await fetch(
+        "ITN_Modules_1-3_Flashcards.json"
+      );
 
 
     if (!response.ok) {
@@ -94,20 +116,9 @@ async function loadCards() {
       await response.json();
 
 
-    /*
-      Expected JSON format:
-
-      {
-        "title": "...",
-        "note": "...",
-        "cards": [
-          {...},
-          {...}
-        ]
-      }
-    */
-
-    if (!Array.isArray(data.cards)) {
+    if (
+      !Array.isArray(data.cards)
+    ) {
 
       throw new Error(
         "The JSON does not contain a valid cards array."
@@ -133,8 +144,9 @@ async function loadCards() {
 
     renderFlashcard();
 
+  }
 
-  } catch (error) {
+  catch (error) {
 
     console.error(
       "Failed to load flashcards:",
@@ -149,22 +161,6 @@ async function loadCards() {
     $("flashDefinition").textContent =
       "The flashcard data could not be loaded. Open the website online once so the files can be cached for offline use.";
 
-
-    $("flashTopic").textContent =
-      "";
-
-
-    $("flashBackTopic").textContent =
-      "";
-
-
-    $("flashPriority").textContent =
-      "—";
-
-
-    $("flashProgress").textContent =
-      "0 / 0";
-
   }
 
 }
@@ -176,7 +172,9 @@ async function loadCards() {
 
 function renderFlashcard() {
 
-  if (filteredCards.length === 0) {
+  if (
+    filteredCards.length === 0
+  ) {
 
     $("flashTerm").textContent =
       "No flashcards found.";
@@ -202,8 +200,9 @@ function renderFlashcard() {
       "0 / 0";
 
 
-    $("flashProgressFill").style.width =
-      "0%";
+    $("flashProgressFill")
+      .style
+      .width = "0%";
 
 
     return;
@@ -269,11 +268,15 @@ function renderFlashcard() {
 
 
   const percentage =
-    ((flashIndex + 1) /
-      filteredCards.length) * 100;
+    (
+      (flashIndex + 1) /
+      filteredCards.length
+    ) * 100;
 
 
-  $("flashProgressFill").style.width =
+  $("flashProgressFill")
+    .style
+    .width =
     `${percentage}%`;
 
 
@@ -295,13 +298,17 @@ function flipCard() {
 
 function nextCard() {
 
-  if (!filteredCards.length) {
+  if (
+    !filteredCards.length
+  ) {
     return;
   }
 
 
   flashIndex =
-    (flashIndex + 1) %
+    (
+      flashIndex + 1
+    ) %
     filteredCards.length;
 
 
@@ -312,14 +319,18 @@ function nextCard() {
 
 function previousCard() {
 
-  if (!filteredCards.length) {
+  if (
+    !filteredCards.length
+  ) {
     return;
   }
 
 
   flashIndex =
-    (flashIndex - 1 +
-      filteredCards.length) %
+    (
+      flashIndex - 1 +
+      filteredCards.length
+    ) %
     filteredCards.length;
 
 
@@ -360,14 +371,16 @@ function getFilteredCards() {
 
     const moduleMatch =
       moduleFilter === "all" ||
-      getModuleNumber(card.module)
-        .toLowerCase() ===
+      getModuleNumber(
+        card.module
+      ).toLowerCase() ===
       moduleFilter.toLowerCase();
 
 
     const priorityMatch =
       priorityFilter === "all" ||
-      card.priority === priorityFilter;
+      card.priority ===
+      priorityFilter;
 
 
     return (
@@ -391,7 +404,6 @@ function applyFilters() {
 
   renderFlashcard();
 
-
   updateQuizStats();
 
 }
@@ -403,7 +415,8 @@ function updateQuizStats() {
     getFilteredCards();
 
 
-  $("availableCount").textContent =
+  $("availableCount")
+    .textContent =
     cards.length;
 
 
@@ -414,12 +427,16 @@ function updateQuizStats() {
   let questionCount;
 
 
-  if (selected === "all") {
+  if (
+    selected === "all"
+  ) {
 
     questionCount =
       cards.length;
 
-  } else {
+  }
+
+  else {
 
     questionCount =
       Math.min(
@@ -430,15 +447,186 @@ function updateQuizStats() {
   }
 
 
-  $("selectedCount").textContent =
+  $("selectedCount")
+    .textContent =
     questionCount;
 
 
-  $("highCount").textContent =
+  $("highCount")
+    .textContent =
     cards.filter(
       card =>
-        card.priority === "HIGH"
+        card.priority ===
+        "HIGH"
     ).length;
+
+}
+
+
+/* =========================================================
+   MISTAKE STORAGE
+   ========================================================= */
+
+function getSavedMistakes() {
+
+  try {
+
+    const saved =
+      localStorage.getItem(
+        MISTAKE_STORAGE_KEY
+      );
+
+
+    if (!saved) {
+      return [];
+    }
+
+
+    const parsed =
+      JSON.parse(saved);
+
+
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "Unable to read saved mistakes:",
+      error
+    );
+
+
+    return [];
+
+  }
+
+}
+
+
+function saveMistakes(
+  mistakes
+) {
+
+  try {
+
+    localStorage.setItem(
+      MISTAKE_STORAGE_KEY,
+      JSON.stringify(mistakes)
+    );
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "Unable to save mistakes:",
+      error
+    );
+
+  }
+
+}
+
+
+/*
+  Add a question to the mistake pool.
+
+  We identify the card using its ID.
+*/
+
+function addMistake(card) {
+
+  if (!card) {
+    return;
+  }
+
+
+  const mistakes =
+    getSavedMistakes();
+
+
+  const exists =
+    mistakes.some(
+      mistake =>
+        String(mistake.id) ===
+        String(card.id)
+    );
+
+
+  if (!exists) {
+
+    mistakes.push({
+      id: card.id
+    });
+
+
+    saveMistakes(
+      mistakes
+    );
+
+  }
+
+}
+
+
+/*
+  Remove a question from the
+  mistake pool after the user
+  answers it correctly.
+*/
+
+function removeMistake(card) {
+
+  if (!card) {
+    return;
+  }
+
+
+  const mistakes =
+    getSavedMistakes();
+
+
+  const updated =
+    mistakes.filter(
+      mistake =>
+        String(mistake.id) !==
+        String(card.id)
+    );
+
+
+  saveMistakes(
+    updated
+  );
+
+}
+
+
+/*
+  Get the actual card objects
+  from the saved IDs.
+*/
+
+function getMistakeCards() {
+
+  const saved =
+    getSavedMistakes();
+
+
+  return saved
+    .map(savedMistake => {
+
+      return allCards.find(
+        card =>
+          String(card.id) ===
+          String(savedMistake.id)
+      );
+
+    })
+    .filter(Boolean);
 
 }
 
@@ -453,7 +641,9 @@ function createQuiz() {
     getFilteredCards();
 
 
-  if (sourceCards.length < 4) {
+  if (
+    sourceCards.length < 4
+  ) {
 
     alert(
       "You need at least 4 flashcards for a multiple-choice quiz."
@@ -472,12 +662,16 @@ function createQuiz() {
   let amount;
 
 
-  if (requested === "all") {
+  if (
+    requested === "all"
+  ) {
 
     amount =
       sourceCards.length;
 
-  } else {
+  }
+
+  else {
 
     amount =
       Math.min(
@@ -494,57 +688,62 @@ function createQuiz() {
 
 
   quizQuestions =
-    selectedCards.map(card => {
+    selectedCards.map(
+      card => {
 
-      const wrongAnswers =
-        shuffle(
-          sourceCards.filter(other => {
+        const wrongAnswers =
+          shuffle(
+            sourceCards.filter(
+              other => {
 
-            return (
-              other.id !== card.id &&
-              other.definition !==
-                card.definition
-            );
+                return (
+                  other.id !==
+                    card.id &&
+                  other.definition !==
+                    card.definition
+                );
 
-          })
-        )
-        .slice(0, 3)
-        .map(other => ({
+              }
+            )
+          )
+          .slice(0, 3)
+          .map(other => ({
+
+            text:
+              other.definition,
+
+            correct:
+              false
+
+          }));
+
+
+        const correctAnswer = {
 
           text:
-            other.definition,
+            card.definition,
 
           correct:
-            false
+            true
 
-        }));
-
-
-      const correctAnswer = {
-
-        text:
-          card.definition,
-
-        correct:
-          true
-
-      };
+        };
 
 
-      return {
+        return {
 
-        card:
-          card,
+          card:
+            card,
 
-        answers:
-          shuffle([
-            correctAnswer,
-            ...wrongAnswers
-          ])
+          answers:
+            shuffle([
+              correctAnswer,
+              ...wrongAnswers
+            ])
 
-      };
+        };
 
-    });
+      }
+    );
 
 
   quizIndex = 0;
@@ -565,7 +764,9 @@ function createQuiz() {
 
 function startQuiz() {
 
-  if (!createQuiz()) {
+  if (
+    !createQuiz()
+  ) {
     return;
   }
 
@@ -597,7 +798,9 @@ function startQuiz() {
 function renderQuizQuestion() {
 
   const question =
-    quizQuestions[quizIndex];
+    quizQuestions[
+      quizIndex
+    ];
 
 
   if (!question) {
@@ -609,41 +812,52 @@ function renderQuizQuestion() {
   }
 
 
-  quizAnswered = false;
+  quizAnswered =
+    false;
 
 
-  $("quizProgress").textContent =
+  $("quizProgress")
+    .textContent =
     `${quizIndex + 1} / ${quizQuestions.length}`;
 
 
-  $("quizScore").textContent =
+  $("quizScore")
+    .textContent =
     quizScore;
 
 
   const progress =
-    ((quizIndex + 1) /
-      quizQuestions.length) * 100;
+    (
+      (quizIndex + 1) /
+      quizQuestions.length
+    ) * 100;
 
 
-  $("quizProgressFill").style.width =
+  $("quizProgressFill")
+    .style
+    .width =
     `${progress}%`;
 
 
-  $("quizTopic").textContent =
+  $("quizTopic")
+    .textContent =
     `${question.card.module} • ${question.card.topic}`;
 
 
-  $("quizPriority").textContent =
+  $("quizPriority")
+    .textContent =
     getPriorityLabel(
       question.card.priority
     );
 
 
-  $("quizQuestion").textContent =
+  $("quizQuestion")
+    .textContent =
     `Which definition matches "${question.card.term}"?`;
 
 
-  $("answers").innerHTML =
+  $("answers")
+    .innerHTML =
     "";
 
 
@@ -705,13 +919,19 @@ function renderQuizQuestion() {
       button.addEventListener(
         "click",
         () => {
-          selectAnswer(index);
+
+          selectAnswer(
+            index
+          );
+
         }
       );
 
 
       $("answers")
-        .appendChild(button);
+        .appendChild(
+          button
+        );
 
     }
   );
@@ -722,11 +942,13 @@ function renderQuizQuestion() {
     .add("hidden");
 
 
-  $("quizFeedback").textContent =
+  $("quizFeedback")
+    .textContent =
     "";
 
 
-  $("nextQuestionBtn").disabled =
+  $("nextQuestionBtn")
+    .disabled =
     true;
 
 }
@@ -736,18 +958,25 @@ function renderQuizQuestion() {
    ANSWER QUESTION
    ========================================================= */
 
-function selectAnswer(selectedIndex) {
+function selectAnswer(
+  selectedIndex
+) {
 
-  if (quizAnswered) {
+  if (
+    quizAnswered
+  ) {
     return;
   }
 
 
-  quizAnswered = true;
+  quizAnswered =
+    true;
 
 
   const question =
-    quizQuestions[quizIndex];
+    quizQuestions[
+      quizIndex
+    ];
 
 
   const buttons =
@@ -759,27 +988,37 @@ function selectAnswer(selectedIndex) {
     ];
 
 
-  buttons.forEach(button => {
+  buttons.forEach(
+    button => {
 
-    button.disabled = true;
+      button.disabled =
+        true;
 
-  });
+    }
+  );
 
 
   const selected =
-    question.answers[selectedIndex];
+    question.answers[
+      selectedIndex
+    ];
 
 
   const correctIndex =
     question.answers.findIndex(
       answer =>
-        answer.correct === true
+        answer.correct ===
+        true
     );
 
 
-  if (selected.correct) {
+  if (
+    selected.correct
+  ) {
 
-    buttons[selectedIndex]
+    buttons[
+      selectedIndex
+    ]
       .classList
       .add("correct");
 
@@ -787,28 +1026,47 @@ function selectAnswer(selectedIndex) {
     quizScore++;
 
 
-    $("quizScore").textContent =
+    $("quizScore")
+      .textContent =
       quizScore;
 
 
-    $("quizFeedback").textContent =
+    $("quizFeedback")
+      .textContent =
       "✅ Correct!";
 
 
-  } else {
+  }
 
-    buttons[selectedIndex]
+  else {
+
+    buttons[
+      selectedIndex
+    ]
       .classList
       .add("wrong");
 
 
-    buttons[correctIndex]
+    buttons[
+      correctIndex
+    ]
       .classList
       .add("correct");
 
 
-    $("quizFeedback").textContent =
+    $("quizFeedback")
+      .textContent =
       `❌ Incorrect. The correct answer is: ${question.card.definition}`;
+
+
+    /*
+      NEW:
+      Save the wrong answer.
+    */
+
+    addMistake(
+      question.card
+    );
 
   }
 
@@ -818,7 +1076,8 @@ function selectAnswer(selectedIndex) {
     .remove("hidden");
 
 
-  $("nextQuestionBtn").disabled =
+  $("nextQuestionBtn")
+    .disabled =
     false;
 
 }
@@ -830,7 +1089,9 @@ function selectAnswer(selectedIndex) {
 
 function nextQuestion() {
 
-  if (!quizAnswered) {
+  if (
+    !quizAnswered
+  ) {
     return;
   }
 
@@ -879,39 +1140,661 @@ function finishQuiz() {
     total === 0
       ? 0
       : Math.round(
-          (quizScore / total) * 100
+          (
+            quizScore /
+            total
+          ) * 100
         );
 
 
-  $("finalScore").textContent =
+  $("finalScore")
+    .textContent =
     `${percentage}%`;
 
 
-  if (percentage >= 90) {
+  if (
+    percentage >= 90
+  ) {
 
-    $("resultTitle").textContent =
+    $("resultTitle")
+      .textContent =
       "Excellent! 🔥";
 
-  } else if (percentage >= 80) {
+  }
 
-    $("resultTitle").textContent =
+  else if (
+    percentage >= 80
+  ) {
+
+    $("resultTitle")
+      .textContent =
       "Great job! 💪";
 
-  } else if (percentage >= 70) {
+  }
 
-    $("resultTitle").textContent =
+  else if (
+    percentage >= 70
+  ) {
+
+    $("resultTitle")
+      .textContent =
       "Good work! 📚";
 
-  } else {
+  }
 
-    $("resultTitle").textContent =
+  else {
+
+    $("resultTitle")
+      .textContent =
       "Keep studying! 💡";
 
   }
 
 
-  $("resultText").textContent =
+  $("resultText")
+    .textContent =
     `You scored ${quizScore} out of ${total}. Review the material and try again.`;
+
+
+  /*
+    NEW:
+    Display mistake review box
+    when mistakes exist.
+  */
+
+  updateMistakeReviewBox();
+
+}
+
+
+/* =========================================================
+   MISTAKE REVIEW BOX
+   ========================================================= */
+
+function updateMistakeReviewBox() {
+
+  const mistakes =
+    getMistakeCards();
+
+
+  const box =
+    $("mistakeReviewBox");
+
+
+  if (
+    !box
+  ) {
+    return;
+  }
+
+
+  if (
+    mistakes.length === 0
+  ) {
+
+    box.classList
+      .add("hidden");
+
+
+    return;
+
+  }
+
+
+  box.classList
+    .remove("hidden");
+
+
+  const count =
+    mistakes.length;
+
+
+  $("mistakeReviewText")
+    .textContent =
+    `You currently have ${count} question${count === 1 ? "" : "s"} that need${count === 1 ? "s" : ""} another review.`;
+
+}
+
+
+/* =========================================================
+   CREATE MISTAKE REVIEW
+   ========================================================= */
+
+function createMistakeReview() {
+
+  const mistakes =
+    getMistakeCards();
+
+
+  if (
+    mistakes.length === 0
+  ) {
+
+    alert(
+      "You currently have no mistakes to review! 🎉"
+    );
+
+
+    return false;
+
+  }
+
+
+  /*
+    Randomly select mistakes.
+
+    We review up to 5 at a time.
+  */
+
+  const amount =
+    Math.min(
+      5,
+      mistakes.length
+    );
+
+
+  const selectedCards =
+    shuffle(mistakes)
+      .slice(
+        0,
+        amount
+      );
+
+
+  mistakeQuestions =
+    selectedCards.map(
+      card => {
+
+        /*
+          We need at least
+          4 possible cards for
+          multiple choice answers.
+        */
+
+        const possibleWrongAnswers =
+          shuffle(
+            allCards.filter(
+              other => {
+
+                return (
+                  String(other.id) !==
+                    String(card.id) &&
+                  other.definition !==
+                    card.definition
+                );
+
+              }
+            )
+          )
+          .slice(0, 3)
+          .map(other => ({
+
+            text:
+              other.definition,
+
+            correct:
+              false
+
+          }));
+
+
+        const correctAnswer = {
+
+          text:
+            card.definition,
+
+          correct:
+            true
+
+        };
+
+
+        return {
+
+          card:
+            card,
+
+          answers:
+            shuffle([
+              correctAnswer,
+              ...possibleWrongAnswers
+            ])
+
+        };
+
+      }
+    );
+
+
+  mistakeIndex = 0;
+
+  mistakeScore = 0;
+
+  mistakeAnswered = false;
+
+
+  return true;
+
+}
+
+
+/* =========================================================
+   START MISTAKE REVIEW
+   ========================================================= */
+
+function startMistakeReview() {
+
+  if (
+    !createMistakeReview()
+  ) {
+    return;
+  }
+
+
+  currentMode =
+    "quiz";
+
+
+  $("quizResult")
+    .classList
+    .add("hidden");
+
+
+  $("quizStartScreen")
+    .classList
+    .add("hidden");
+
+
+  $("quizGame")
+    .classList
+    .remove("hidden");
+
+
+  renderMistakeQuestion();
+
+}
+
+
+/* =========================================================
+   RENDER MISTAKE QUESTION
+   ========================================================= */
+
+function renderMistakeQuestion() {
+
+  const question =
+    mistakeQuestions[
+      mistakeIndex
+    ];
+
+
+  if (!question) {
+
+    finishMistakeReview();
+
+    return;
+
+  }
+
+
+  mistakeAnswered =
+    false;
+
+
+  $("quizProgress")
+    .textContent =
+    `Mistake Review ${mistakeIndex + 1} / ${mistakeQuestions.length}`;
+
+
+  $("quizScore")
+    .textContent =
+    mistakeScore;
+
+
+  const progress =
+    (
+      (mistakeIndex + 1) /
+      mistakeQuestions.length
+    ) * 100;
+
+
+  $("quizProgressFill")
+    .style
+    .width =
+    `${progress}%`;
+
+
+  $("quizTopic")
+    .textContent =
+    `${question.card.module} • ${question.card.topic}`;
+
+
+  $("quizPriority")
+    .textContent =
+    getPriorityLabel(
+      question.card.priority
+    );
+
+
+  $("quizQuestion")
+    .textContent =
+    `Which definition matches "${question.card.term}"?`;
+
+
+  $("answers")
+    .innerHTML =
+    "";
+
+
+  const letters = [
+    "A",
+    "B",
+    "C",
+    "D"
+  ];
+
+
+  question.answers.forEach(
+    (answer, index) => {
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+
+      button.className =
+        "answer";
+
+
+      const letter =
+        document.createElement(
+          "span"
+        );
+
+
+      letter.className =
+        "letter";
+
+
+      letter.textContent =
+        letters[index];
+
+
+      const text =
+        document.createElement(
+          "span"
+        );
+
+
+      text.textContent =
+        answer.text;
+
+
+      button.appendChild(
+        letter
+      );
+
+
+      button.appendChild(
+        text
+      );
+
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          selectMistakeAnswer(
+            index
+          );
+
+        }
+      );
+
+
+      $("answers")
+        .appendChild(
+          button
+        );
+
+    }
+  );
+
+
+  $("quizFeedback")
+    .classList
+    .add("hidden");
+
+
+  $("quizFeedback")
+    .textContent =
+    "";
+
+
+  $("nextQuestionBtn")
+    .disabled =
+    true;
+
+}
+
+
+/* =========================================================
+   ANSWER MISTAKE QUESTION
+   ========================================================= */
+
+function selectMistakeAnswer(
+  selectedIndex
+) {
+
+  if (
+    mistakeAnswered
+  ) {
+    return;
+  }
+
+
+  mistakeAnswered =
+    true;
+
+
+  const question =
+    mistakeQuestions[
+      mistakeIndex
+    ];
+
+
+  const buttons =
+    [
+      ...$("answers")
+        .querySelectorAll(
+          ".answer"
+        )
+    ];
+
+
+  buttons.forEach(
+    button => {
+
+      button.disabled =
+        true;
+
+    }
+  );
+
+
+  const selected =
+    question.answers[
+      selectedIndex
+    ];
+
+
+  const correctIndex =
+    question.answers.findIndex(
+      answer =>
+        answer.correct ===
+        true
+    );
+
+
+  if (
+    selected.correct
+  ) {
+
+    buttons[
+      selectedIndex
+    ]
+      .classList
+      .add("correct");
+
+
+    mistakeScore++;
+
+
+    $("quizScore")
+      .textContent =
+      mistakeScore;
+
+
+    $("quizFeedback")
+      .textContent =
+      "✅ Correct! You mastered this mistake.";
+
+
+    /*
+      IMPORTANT:
+
+      Correct answer means
+      remove it from the
+      persistent mistake pool.
+    */
+
+    removeMistake(
+      question.card
+    );
+
+  }
+
+  else {
+
+    buttons[
+      selectedIndex
+    ]
+      .classList
+      .add("wrong");
+
+
+    buttons[
+      correctIndex
+    ]
+      .classList
+      .add("correct");
+
+
+    $("quizFeedback")
+      .textContent =
+      `❌ Not yet. The correct answer is: ${question.card.definition}`;
+
+    /*
+      Do NOT remove the mistake.
+
+      It remains in storage.
+    */
+
+  }
+
+
+  $("quizFeedback")
+    .classList
+    .remove("hidden");
+
+
+  $("nextQuestionBtn")
+    .disabled =
+    false;
+
+}
+
+
+/* =========================================================
+   NEXT MISTAKE QUESTION
+   ========================================================= */
+
+function nextMistakeQuestion() {
+
+  if (
+    !mistakeAnswered
+  ) {
+    return;
+  }
+
+
+  mistakeIndex++;
+
+
+  if (
+    mistakeIndex >=
+    mistakeQuestions.length
+  ) {
+
+    finishMistakeReview();
+
+    return;
+
+  }
+
+
+  renderMistakeQuestion();
+
+}
+
+
+/* =========================================================
+   FINISH MISTAKE REVIEW
+   ========================================================= */
+
+function finishMistakeReview() {
+
+  $("quizGame")
+    .classList
+    .add("hidden");
+
+
+  $("quizResult")
+    .classList
+    .remove("hidden");
+
+
+  const total =
+    mistakeQuestions.length;
+
+
+  const percentage =
+    total === 0
+      ? 0
+      : Math.round(
+          (
+            mistakeScore /
+            total
+          ) * 100
+        );
+
+
+  $("finalScore")
+    .textContent =
+    `${percentage}%`;
+
+
+  $("resultTitle")
+    .textContent =
+    "Mistake Review Complete! 🔥";
+
+
+  $("resultText")
+    .textContent =
+    `You got ${mistakeScore} out of ${total} mistake questions correct.`;
+
+
+  updateMistakeReviewBox();
 
 }
 
@@ -950,7 +1833,9 @@ function showFlashcards() {
 
 
   document
-    .querySelectorAll(".flashcard-only")
+    .querySelectorAll(
+      ".flashcard-only"
+    )
     .forEach(element => {
 
       element.classList
@@ -960,7 +1845,9 @@ function showFlashcards() {
 
 
   document
-    .querySelectorAll(".quiz-only")
+    .querySelectorAll(
+      ".quiz-only"
+    )
     .forEach(element => {
 
       element.classList
@@ -992,19 +1879,24 @@ function showQuiz() {
 
 
   document
-    .querySelectorAll(".mode-tab")
+    .querySelectorAll(
+      ".mode-tab"
+    )
     .forEach(tab => {
 
       tab.classList.toggle(
         "active",
-        tab.dataset.mode === "quiz"
+        tab.dataset.mode ===
+          "quiz"
       );
 
     });
 
 
   document
-    .querySelectorAll(".flashcard-only")
+    .querySelectorAll(
+      ".flashcard-only"
+    )
     .forEach(element => {
 
       element.classList
@@ -1014,7 +1906,9 @@ function showQuiz() {
 
 
   document
-    .querySelectorAll(".quiz-only")
+    .querySelectorAll(
+      ".quiz-only"
+    )
     .forEach(element => {
 
       element.classList
@@ -1068,7 +1962,8 @@ function toggleTheme() {
   );
 
 
-  $("themeBtn").textContent =
+  $("themeBtn")
+    .textContent =
     isLight
       ? "☀"
       : "☾";
@@ -1081,7 +1976,7 @@ function toggleTheme() {
    ========================================================= */
 
 
-/* Flashcard navigation */
+/* Flashcards */
 
 $("prevBtn")
   .addEventListener(
@@ -1151,7 +2046,9 @@ $("quizCount")
 /* Mode buttons */
 
 document
-  .querySelectorAll(".mode-tab")
+  .querySelectorAll(
+    ".mode-tab"
+  )
   .forEach(tab => {
 
     tab.addEventListener(
@@ -1165,7 +2062,9 @@ document
 
           showQuiz();
 
-        } else {
+        }
+
+        else {
 
           showFlashcards();
 
@@ -1204,14 +2103,67 @@ $("beginQuizBtn")
 $("nextQuestionBtn")
   .addEventListener(
     "click",
-    nextQuestion
+    () => {
+
+      /*
+        If we're currently doing
+        mistake review, use the
+        mistake-review navigation.
+      */
+
+      if (
+        mistakeQuestions.length &&
+        $("quizResult")
+          .classList
+          .contains("hidden") &&
+        currentMode === "quiz" &&
+        !quizQuestions[
+          quizIndex
+        ]
+      ) {
+
+        nextMistakeQuestion();
+
+      }
+
+      else {
+
+        nextQuestion();
+
+      }
+
+    }
   );
 
 
 $("retryQuizBtn")
   .addEventListener(
     "click",
-    startQuiz
+    () => {
+
+      /*
+        Clear mistake-review state
+        before starting a normal quiz.
+      */
+
+      mistakeQuestions = [];
+
+      mistakeIndex = 0;
+
+      mistakeScore = 0;
+
+      startQuiz();
+
+    }
+  );
+
+
+/* Review mistakes */
+
+$("reviewMistakesBtn")
+  .addEventListener(
+    "click",
+    startMistakeReview
   );
 
 
@@ -1222,12 +2174,12 @@ $("reviewHighBtn")
     "click",
     () => {
 
-      $("priorityFilter").value =
+      $("priorityFilter")
+        .value =
         "HIGH";
 
 
       applyFilters();
-
 
       showFlashcards();
 
@@ -1261,8 +2213,6 @@ document.addEventListener(
 
     }
 
-
-    /* Flashcard controls */
 
     if (
       currentMode ===
@@ -1306,12 +2256,11 @@ document.addEventListener(
     }
 
 
-    /* Quiz */
-
     if (
       currentMode ===
-      "quiz" &&
-      event.key === "Enter" &&
+        "quiz" &&
+      event.key ===
+        "Enter" &&
       quizAnswered
     ) {
 
@@ -1338,7 +2287,8 @@ if (
     .add("light");
 
 
-  $("themeBtn").textContent =
+  $("themeBtn")
+    .textContent =
     "☀";
 
 }
