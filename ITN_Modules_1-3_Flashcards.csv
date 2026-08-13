@@ -1,0 +1,192 @@
+﻿id,module,topic,term,definition,priority
+1,Module 1 — Networking Today,1.1 Networks Affect Our Lives,Networks Connect Us,"In today’s world, through the use of networks, we are connected like never before.",MEDIUM
+2,Module 1 — Networking Today,1.1 Networks Affect Our Lives,Human network,Human network,LOW
+3,Module 1 — Networking Today,1.2 Network Components,Host / End device,Every computer on a network is called a host or end device.,HIGH
+4,Module 1 — Networking Today,1.2 Network Components,Server,Servers are computers that provide information to end devices:,HIGH
+5,Module 1 — Networking Today,1.2 Network Components,Client,Clients are computers that send requests to the servers to retrieve information:,HIGH
+6,Module 1 — Networking Today,1.2 Network Components,Peer-to-Peer Network,It is possible to have a device be a client and a server in a Peer-to-Peer Network. This type of network design is only recommended for very small networks.,HIGH
+7,Module 1 — Networking Today,1.2 Network Components,End device,"An end device is where a message originates from or where it is received. Data originates with an end device, flows through the network, and arrives at an end device.",HIGH
+8,Module 1 — Networking Today,1.2 Network Components,Intermediary device,"An intermediary device interconnects end devices. Examples include switches, wireless access points, routers, and firewalls.",HIGH
+9,Module 1 — Networking Today,1.2 Network Components,Network media,Communication across a network is carried through a medium which allows a message to travel from source to destination.,HIGH
+10,Module 1 — Networking Today,1.2 Network Components,Email server,Email server runs email server software. Clients use client software to access email.,MEDIUM
+11,Module 1 — Networking Today,1.2 Network Components,Web server,Web server runs web server software. Clients use browser software to access web pages.,MEDIUM
+12,Module 1 — Networking Today,1.2 Network Components,File server,File server stores corporate and user files. The client devices access these files.,MEDIUM
+13,Module 1 — Networking Today,1.2 Network Components,Metal wires within cables,Uses electrical impulses.,MEDIUM
+14,Module 1 — Networking Today,1.2 Network Components,Glass or plastic fibers within cables (fiber-optic cable),Uses pulses of light.,MEDIUM
+15,Module 1 — Networking Today,1.2 Network Components,Wireless transmission,Uses modulation of specific frequencies of electromagnetic waves.,MEDIUM
+16,Module 1 — Networking Today,1.3 Network Representations and Topologies,Network diagram / topology diagram,"Network diagrams, often called topology diagrams, use symbols to represent devices within the network.",HIGH
+17,Module 1 — Networking Today,1.3 Network Representations and Topologies,Physical topology diagram,Physical topology diagrams illustrate the physical location of intermediary devices and cable installation.,HIGH
+18,Module 1 — Networking Today,1.3 Network Representations and Topologies,Logical topology diagram,"Logical topology diagrams illustrate devices, ports, and the addressing scheme of the network.",HIGH
+19,Module 1 — Networking Today,1.3 Network Representations and Topologies,Network Interface Card (NIC),Network Interface Card (NIC),MEDIUM
+20,Module 1 — Networking Today,1.3 Network Representations and Topologies,Physical Port,Physical Port,MEDIUM
+21,Module 1 — Networking Today,1.3 Network Representations and Topologies,Interface,Interface,MEDIUM
+22,Module 1 — Networking Today,1.4 Common Types of Networks,LAN,A LAN is a network infrastructure that spans a small geographical area.,HIGH
+23,Module 1 — Networking Today,1.4 Common Types of Networks,WAN,A WAN is a network infrastructure that spans a wide geographical area.,HIGH
+24,Module 1 — Networking Today,1.4 Common Types of Networks,Internet,The internet is a worldwide collection of interconnected LANs and WANs.,HIGH
+25,Module 1 — Networking Today,1.4 Common Types of Networks,Small Office/Home Office (SOHO),enables computer within a home or remote office to connect to a corporate network,MEDIUM
+26,Module 1 — Networking Today,1.4 Common Types of Networks,LAN administration,Administered by a single organization or individual.,MEDIUM
+27,Module 1 — Networking Today,1.4 Common Types of Networks,WAN administration,Typically administered by one or more service providers.,MEDIUM
+28,Module 1 — Networking Today,1.4 Common Types of Networks,Small Home Network,connect a few computers to each other and the Internet,LOW
+29,Module 1 — Networking Today,1.4 Common Types of Networks,Medium to Large Networks,many locations with hundreds or thousands of interconnected computers,LOW
+30,Module 1 — Networking Today,1.4 Common Types of Networks,World Wide Networks,connects hundreds of millions of computers worldwide – such as the internet,LOW
+31,Module 1 — Networking Today,1.5 Internet Connections,Converged network,"Converged data networks carry multiple services on one link including: data, voice, video.",HIGH
+32,Module 1 — Networking Today,1.5 Internet Connections,Cable,"high bandwidth, always on, internet offered by cable television service providers.",MEDIUM
+33,Module 1 — Networking Today,1.5 Internet Connections,DSL,"high bandwidth, always on, internet connection that runs over a telephone line.",MEDIUM
+34,Module 1 — Networking Today,1.5 Internet Connections,Cellular,uses a cell phone network to connect to the internet.,MEDIUM
+35,Module 1 — Networking Today,1.5 Internet Connections,Satellite,major benefit to rural areas without Internet Service Providers.,MEDIUM
+36,Module 1 — Networking Today,1.5 Internet Connections,Dedicated Leased Line,These are reserved circuits within the service provider’s network that connect distant offices with private voice and/or data networking.,MEDIUM
+37,Module 1 — Networking Today,1.5 Internet Connections,Ethernet WAN,This extends LAN access technology into the WAN.,MEDIUM
+38,Module 1 — Networking Today,1.5 Internet Connections,Dial-up telephone,"an inexpensive, low bandwidth option using a modem.",LOW
+39,Module 1 — Networking Today,1.6 Reliable Networks,Network Architecture,Network Architecture refers to the technologies that support the infrastructure that moves data across the network.,HIGH
+40,Module 1 — Networking Today,1.6 Reliable Networks,Fault Tolerance,Fault Tolerance,HIGH
+41,Module 1 — Networking Today,1.6 Reliable Networks,Scalability,Scalability,HIGH
+42,Module 1 — Networking Today,1.6 Reliable Networks,Quality of Service (QoS),Quality of Service (QoS),HIGH
+43,Module 1 — Networking Today,1.6 Reliable Networks,Security,Security,HIGH
+44,Module 1 — Networking Today,1.7 Network Trends,Bring Your Own Device (BYOD),allows users to use their own devices to access the network.,HIGH
+45,Module 1 — Networking Today,1.7 Network Trends,Cloud computing,"allows users to access applications, services, and resources over the network.",HIGH
+46,Module 1 — Networking Today,1.7 Network Trends,Online collaboration,allows people to work together using network-based tools and services.,MEDIUM
+47,Module 1 — Networking Today,1.7 Network Trends,Video communications,allows people to communicate using video over networks.,MEDIUM
+48,Module 1 — Networking Today,1.7 Network Trends,Powerline networking,can allow devices to connect to a LAN where data network cables or wireless communications are not a viable option.,MEDIUM
+49,Module 1 — Networking Today,1.7 Network Trends,Wireless Internet Service Provider (WISP),is an ISP that connects subscribers to designated access points or hotspots.,MEDIUM
+50,Module 1 — Networking Today,1.8 Network Security,Network security,Network security is an integral part of networking regardless of the size of the network.,HIGH
+51,Module 1 — Networking Today,1.8 Network Security,External threats,"Viruses, worms, and Trojan horses; Spyware and adware; Zero-day attacks; Threat Actor attacks; Denial of service attacks; Data interception and theft; Identity theft",HIGH
+52,Module 1 — Networking Today,1.8 Network Security,Internal threats,lost or stolen devices; accidental misuse by employees; malicious employees,HIGH
+53,Module 1 — Networking Today,1.8 Network Security,Firewall filtering,used to block unauthorized access to the network.,HIGH
+54,Module 1 — Networking Today,1.8 Network Security,Access control lists (ACL),Access control lists (ACL),HIGH
+55,Module 1 — Networking Today,1.8 Network Security,Intrusion prevention systems (IPS),Intrusion prevention systems (IPS),HIGH
+56,Module 1 — Networking Today,1.8 Network Security,Virtual private networks (VPN),Virtual private networks (VPN),HIGH
+57,Module 1 — Networking Today,1.9 The IT Professional,CCNA,The Cisco Certified Network Associate (CCNA) certification demonstrates your knowledge of foundational technologies.,MEDIUM
+58,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Shell,The user interface that allows users to request specific tasks from the computer. These requests can be made either through the CLI or GUI interfaces.,HIGH
+59,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Kernel,Communicates between the hardware and software of a computer and manages how hardware resources are used to meet software requirements.,HIGH
+60,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,GUI,"A GUI allows the user to interact with the system using an environment of graphical icons, menus, and windows.",HIGH
+61,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Console,"A physical management port used to access a device in order to provide maintenance, such as performing the initial configurations.",HIGH
+62,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Secure Shell (SSH),"Establishes a secure remote CLI connection to a device, through a virtual interface, over a network.",HIGH
+63,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Telnet,Establishes an insecure remote CLI connection to a device over the network.,HIGH
+64,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Hardware,The physical part of a computer including underlying electronics.,MEDIUM
+65,Module 2 — Basic Switch and End Device Configuration,2.1 Cisco IOS Access,Terminal emulation programs,Terminal emulation programs are used to connect to a network device by either a console port or by an SSH/Telnet connection.,MEDIUM
+66,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,User EXEC Mode,Allows access to only a limited number of basic monitoring commands. Identified by the CLI prompt that ends with the > symbol,HIGH
+67,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,Privileged EXEC Mode,Allows access to all commands and features. Identified by the CLI prompt that ends with the # symbol,HIGH
+68,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,Global Configuration Mode,Used to access configuration options on the device,HIGH
+69,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,Line Configuration Mode,"Used to configure console, SSH, Telnet or AUX access",HIGH
+70,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,Interface Configuration Mode,Used to configure a switch port or router interface,HIGH
+71,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,enable,"To move from user EXEC mode to privilege EXEC mode, use the enabled command.",HIGH
+72,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,configure terminal,"To move in and out of global configuration mode, use the configure terminal command.",HIGH
+73,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,exit,"To return to privilege EXEC mode from global configuration mode, use the exit command.",HIGH
+74,Module 2 — Basic Switch and End Device Configuration,2.2 IOS Navigation,end / Ctrl+Z,"To return to privilege EXEC mode from any subconfiguration mode, use the end command or key combination Ctrl +Z.",HIGH
+75,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Keyword,"This is a specific parameter defined in the operating system (in the figure, ip protocols).",HIGH
+76,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Argument,"This is not predefined; it is a value or variable defined by the user (in the figure, 192.168.10.5).",HIGH
+77,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Command syntax,"The command syntax provides the pattern, or format, that must be used when entering a command.",HIGH
+78,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,[x],Square brackets indicate an optional element (keyword or argument).,HIGH
+79,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,{x},Braces indicate a required element (keyword or argument).,HIGH
+80,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Context-sensitive help,Context-sensitive help enables you to quickly find answers to these questions: Which commands are available in each command mode? Which commands start with specific characters or group of characters? Which arguments and keywords are available to particular commands?,HIGH
+81,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Command syntax check,"Command syntax check verifies that a valid command was entered by the user. If the interpreter cannot understand the command being entered, it will provide feedback describing what is wrong with the command.",HIGH
+82,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Ctrl-C,"When in any configuration mode, ends the configuration mode and returns to privileged EXEC mode.",HIGH
+83,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Ctrl-Z,"When in any configuration mode, ends the configuration mode and returns to privileged EXEC mode.",HIGH
+84,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Boldface convention,Boldface text indicates commands and keywords that you enter literally as shown.,MEDIUM
+85,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Italics convention,Italic text indicates arguments for which you supply values.,MEDIUM
+86,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Command shortening,Commands and keywords can be shortened to the minimum number of characters that identify a unique selection.,MEDIUM
+87,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Tab,Completes a partial command name entry.,MEDIUM
+88,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Up Arrow / Ctrl+P,"Recalls the commands in the history buffer, beginning with the most recent commands.",MEDIUM
+89,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Ctrl-Shift-6,"All-purpose break sequence used to abort DNS lookups, traceroutes, pings, etc.",MEDIUM
+90,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,--More-- prompt,"When a command output produces more text than can be displayed in a terminal window, the IOS will display a “--More--” prompt.",MEDIUM
+91,Module 2 — Basic Switch and End Device Configuration,2.3 The Command Structure,Backspace,Erases the character to the left of the cursor.,LOW
+92,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,Hostname,The first configuration command on any device should be to give it a unique hostname.,HIGH
+93,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,Password guidelines,"Use passwords that are more than eight characters in length; use a combination of upper and lowercase letters, numbers, special characters, and/or numeric sequences; avoid using the same password for all devices; do not use common words because they are easily guessed.",HIGH
+94,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,line console 0,First enter line console configuration mode using the line console 0 command in global configuration mode.,HIGH
+95,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,password password,"Next, specify the user EXEC mode password using the password password command.",HIGH
+96,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,login,"Finally, enable user EXEC access using the login command.",HIGH
+97,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,enable secret password,"Next, use the enable secret password command.",HIGH
+98,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,line vty 0 15,First enter line VTY configuration mode using the line vty 0 15 command in global configuration mode.,HIGH
+99,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,enable secret,The enable secret command is used to secure privileged EXEC mode access.,HIGH
+100,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,service password-encryption,The service password-encryption command encrypts plaintext passwords in the configuration file.,HIGH
+101,Module 2 — Basic Switch and End Device Configuration,2.4 Basic Device Configuration,banner motd,A message-of-the-day (MOTD) banner is used to provide a message to users when they log in to the device.,MEDIUM
+102,Module 2 — Basic Switch and End Device Configuration,2.5 Save Configurations,running-config,The running configuration reflects the current configuration of the device.,HIGH
+103,Module 2 — Basic Switch and End Device Configuration,2.5 Save Configurations,startup-config,The startup configuration is stored in NVRAM and is used to load the configuration when the device starts.,HIGH
+104,Module 2 — Basic Switch and End Device Configuration,2.5 Save Configurations,copy running-config startup-config,Use the copy running-config startup-config command to save the running configuration to the startup configuration.,HIGH
+105,Module 2 — Basic Switch and End Device Configuration,2.5 Save Configurations,erase startup-config,The erase startup-config command removes the startup configuration from NVRAM.,MEDIUM
+106,Module 2 — Basic Switch and End Device Configuration,2.5 Save Configurations,reload,The reload command reloads the device.,MEDIUM
+107,Module 2 — Basic Switch and End Device Configuration,2.6 Ports and Addresses,IP address,IP addresses enable devices to locate one another and establish end-to-end communication on the internet.,HIGH
+108,Module 2 — Basic Switch and End Device Configuration,2.6 Ports and Addresses,MAC address,The physical address of a network interface.,HIGH
+109,Module 2 — Basic Switch and End Device Configuration,2.6 Ports and Addresses,Physical address,The physical address of a network interface.,MEDIUM
+110,Module 2 — Basic Switch and End Device Configuration,2.6 Ports and Addresses,Logical address,A logical address is used to identify a device on a network.,MEDIUM
+111,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,Manual IP address configuration,"To configure an IPv4 address manually on a host, enter the IP address, subnet mask, and default gateway.",HIGH
+112,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,DHCP,DHCP enables automatic IPv4 address configuration for every end device that is DHCP-enabled.,HIGH
+113,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,DHCPv6,IPv6 uses DHCPv6 and SLAAC (Stateless Address Autoconfiguration) for dynamic address allocation.,HIGH
+114,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,SLAAC,IPv6 uses DHCPv6 and SLAAC (Stateless Address Autoconfiguration) for dynamic address allocation.,HIGH
+115,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,Switch Virtual Interface (SVI),"To access the switch remotely, an IP address and a subnet mask must be configured on the SVI.",HIGH
+116,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,interface vlan 1,Enter the interface vlan 1 command in global configuration mode.,HIGH
+117,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,ip address ip-address subnet-mask,Next assign an IPv4 address using the ip address ip-address subnet-mask command.,HIGH
+118,Module 2 — Basic Switch and End Device Configuration,2.7 Configure IP Addressing,no shutdown,"Finally, enable the virtual interface using the no shutdown command.",HIGH
+119,Module 2 — Basic Switch and End Device Configuration,2.8 Verify Connectivity,ping,The ping command is used to test connectivity on both switches and both PCs.,HIGH
+120,Module 3 — Protocols and Models,3.1 The Rules,Source (sender),There will be a source (sender).,HIGH
+121,Module 3 — Protocols and Models,3.1 The Rules,Destination (receiver),There will be a destination (receiver).,HIGH
+122,Module 3 — Protocols and Models,3.1 The Rules,Channel (media),There will be a channel (media) that provides for the path of communications to occur.,HIGH
+123,Module 3 — Protocols and Models,3.1 The Rules,Protocol,Protocols are the rules that communications will follow.,HIGH
+124,Module 3 — Protocols and Models,3.1 The Rules,Encoding,Encoding is the process of converting information into another acceptable form for transmission.,HIGH
+125,Module 3 — Protocols and Models,3.1 The Rules,Decoding,Decoding reverses this process to interpret the information.,HIGH
+126,Module 3 — Protocols and Models,3.1 The Rules,Flow Control,Manages the rate of data transmission and defines how much information can be sent and the speed at which it can be delivered.,HIGH
+127,Module 3 — Protocols and Models,3.1 The Rules,Response Timeout,Manages how long a device waits when it does not hear a reply from the destination.,HIGH
+128,Module 3 — Protocols and Models,3.1 The Rules,Access method,Determines when someone can send a message.,HIGH
+129,Module 3 — Protocols and Models,3.1 The Rules,Collision,This is when more than one device sends traffic at the same time and the messages become corrupt.,HIGH
+130,Module 3 — Protocols and Models,3.1 The Rules,Unicast,one to one communication,HIGH
+131,Module 3 — Protocols and Models,3.1 The Rules,Multicast,"one to many, typically not all",HIGH
+132,Module 3 — Protocols and Models,3.1 The Rules,Broadcast,one to all,HIGH
+133,Module 3 — Protocols and Models,3.2 Protocols,Network protocol,Network protocols define a common set of rules.,HIGH
+134,Module 3 — Protocols and Models,3.2 Protocols,Network Communications protocols,enable two or more devices to communicate over one or more networks,HIGH
+135,Module 3 — Protocols and Models,3.2 Protocols,Network Security protocols,"secure data to provide authentication, data integrity, and data encryption",HIGH
+136,Module 3 — Protocols and Models,3.2 Protocols,Routing protocols,"enable routers to exchange route information, compare path information, and select best path",HIGH
+137,Module 3 — Protocols and Models,3.2 Protocols,Addressing,Identifies sender and receiver,HIGH
+138,Module 3 — Protocols and Models,3.2 Protocols,Reliability,Provides guaranteed delivery,HIGH
+139,Module 3 — Protocols and Models,3.2 Protocols,Sequencing,Uniquely labels each transmitted segment of data,HIGH
+140,Module 3 — Protocols and Models,3.2 Protocols,Error Detection,Determines if data became corrupted during transmission,HIGH
+141,Module 3 — Protocols and Models,3.2 Protocols,Application Interface,Process-to-process communications between network applications,HIGH
+142,Module 3 — Protocols and Models,3.2 Protocols,HTTP,Governs the way a web server and a web client interact; Defines content and format,HIGH
+143,Module 3 — Protocols and Models,3.2 Protocols,TCP,Manages the individual conversations; Provides guaranteed delivery; Manages flow control,HIGH
+144,Module 3 — Protocols and Models,3.2 Protocols,IP,Delivers messages globally from the sender to the receiver,HIGH
+145,Module 3 — Protocols and Models,3.2 Protocols,Ethernet,Delivers messages from one NIC to another NIC on the same Ethernet Local Area Network (LAN),HIGH
+146,Module 3 — Protocols and Models,3.2 Protocols,Service Discovery protocols,used for the automatic detection of devices or services,MEDIUM
+147,Module 3 — Protocols and Models,3.3 Protocol Suites,Protocol suite,A group of inter-related protocols necessary to perform a communication function; Sets of rules that work together to help solve a problem,HIGH
+148,Module 3 — Protocols and Models,3.3 Protocol Suites,TCP/IP protocol suite,The most common protocol suite and maintained by the Internet Engineering Task Force (IETF),HIGH
+149,Module 3 — Protocols and Models,3.3 Protocol Suites,Open standard protocol suite,An open standard protocol suite that is freely available to the public and can be used by any vendor,HIGH
+150,Module 3 — Protocols and Models,3.3 Protocol Suites,Standards-based protocol suite,A standards-based protocol suite that is endorsed by the networking industry and approved by a standards organization to ensure interoperability,HIGH
+151,Module 3 — Protocols and Models,3.4 Standards Organizations,Open standards,Open standards encourage: interoperability; competition; innovation,HIGH
+152,Module 3 — Protocols and Models,3.4 Standards Organizations,Standards organizations,vendor-neutral; non-profit organizations; established to develop and promote the concept of open standards.,HIGH
+153,Module 3 — Protocols and Models,3.4 Standards Organizations,IAB,Responsible for management and development of internet standards,HIGH
+154,Module 3 — Protocols and Models,3.4 Standards Organizations,IETF,"Develops, updates, and maintains internet and TCP/IP technologies",HIGH
+155,Module 3 — Protocols and Models,3.4 Standards Organizations,ICANN,"Coordinates IP address allocation, the management of domain names, and assignment of other information",HIGH
+156,Module 3 — Protocols and Models,3.4 Standards Organizations,IANA,"Oversees and manages IP address allocation, domain name management, and protocol identifiers for ICANN",HIGH
+157,Module 3 — Protocols and Models,3.4 Standards Organizations,ISOC,Promotes the open development and evolution of internet,MEDIUM
+158,Module 3 — Protocols and Models,3.4 Standards Organizations,IRTF,Focused on long-term research related to internet and TCP/IP protocols,MEDIUM
+159,Module 3 — Protocols and Models,3.4 Standards Organizations,IEEE,"dedicated to creating standards in power and energy, healthcare, telecommunications, and networking",MEDIUM
+160,Module 3 — Protocols and Models,3.4 Standards Organizations,EIA,"develops standards relating to electrical wiring, connectors, and the 19-inch racks used to mount networking equipment",MEDIUM
+161,Module 3 — Protocols and Models,3.4 Standards Organizations,TIA,"develops communication standards in radio equipment, cellular towers, Voice over IP (VoIP) devices, satellite communications, and more",MEDIUM
+162,Module 3 — Protocols and Models,3.4 Standards Organizations,ITU-T,"defines standards for video compression, Internet Protocol Television (IPTV), and broadband communications, such as a digital subscriber line (DSL)",MEDIUM
+163,Module 3 — Protocols and Models,3.5 Reference Models,Layered model,"Complex concepts such as how a network operates can be difficult to explain and understand. For this reason, a layered model is used.",HIGH
+164,Module 3 — Protocols and Models,3.5 Reference Models,OSI Reference Model,Open System Interconnection (OSI) Reference Model,HIGH
+165,Module 3 — Protocols and Models,3.5 Reference Models,TCP/IP Reference Model,TCP/IP Reference Model,HIGH
+166,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 7 — Application,Contains protocols used for process-to-process communications.,HIGH
+167,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 6 — Presentation,Provides for common representation of the data transferred between application layer services.,HIGH
+168,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 5 — Session,Provides services to the presentation layer and to manage data exchange.,HIGH
+169,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 4 — Transport,"Defines services to segment, transfer, and reassemble the data for individual communications.",HIGH
+170,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 3 — Network,Provides services to exchange the individual pieces of data over the network.,HIGH
+171,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 2 — Data Link,Describes methods for exchanging data frames over a common media.,HIGH
+172,Module 3 — Protocols and Models,3.5 Reference Models,OSI Layer 1 — Physical,"Describes the means to activate, maintain, and de-activate physical connections.",HIGH
+173,Module 3 — Protocols and Models,3.5 Reference Models,TCP/IP Application layer,"Represents data to the user, plus encoding and dialog control.",HIGH
+174,Module 3 — Protocols and Models,3.5 Reference Models,TCP/IP Transport layer,Supports communication between various devices across diverse networks.,HIGH
+175,Module 3 — Protocols and Models,3.5 Reference Models,TCP/IP Internet layer,Determines the best path through the network.,HIGH
+176,Module 3 — Protocols and Models,3.5 Reference Models,TCP/IP Network Access layer,Controls the hardware devices and media that make up the network.,HIGH
+177,Module 3 — Protocols and Models,3.6 Data Encapsulation,Segmenting,Segmenting is the process of breaking up messages into smaller units.,HIGH
+178,Module 3 — Protocols and Models,3.6 Data Encapsulation,Multiplexing,Multiplexing is the processes of taking multiple streams of segmented data and interleaving them together.,HIGH
+179,Module 3 — Protocols and Models,3.6 Data Encapsulation,Sequencing,Sequencing messages is the process of numbering the segments so that the message may be reassembled at the destination.,HIGH
+180,Module 3 — Protocols and Models,3.6 Data Encapsulation,Encapsulation,Encapsulation is the process where protocols add their information to the data.,HIGH
+181,Module 3 — Protocols and Models,3.6 Data Encapsulation,Protocol Data Unit (PDU),The form that a piece of data takes at any layer is called a protocol data unit (PDU).,HIGH
+182,Module 3 — Protocols and Models,3.6 Data Encapsulation,PDU order,Data (Data Stream) → Segment → Packet → Frame → Bits (Bit Stream),HIGH
+183,Module 3 — Protocols and Models,3.6 Data Encapsulation,De-encapsulation,Data is de-encapsulated as it moves up the stack.,HIGH
+184,Module 3 — Protocols and Models,3.7 Data Access,Network layer addresses,Responsible for delivering the IP packet from original source to the final destination.,HIGH
+185,Module 3 — Protocols and Models,3.7 Data Access,Data link layer addresses,Responsible for delivering the data link frame from one network interface card (NIC) to another NIC on the same network.,HIGH
+186,Module 3 — Protocols and Models,3.7 Data Access,Source IP address,"The IP address of the sending device, original source of the packet.",HIGH
+187,Module 3 — Protocols and Models,3.7 Data Access,Destination IP address,"The IP address of the receiving device, final destination of the packet.",HIGH
+188,Module 3 — Protocols and Models,3.7 Data Access,Network portion (IPv4) / Prefix (IPv6),The left-most part of the address indicates the network group which the IP address is a member. Each LAN or WAN will have the same network portion.,HIGH
+189,Module 3 — Protocols and Models,3.7 Data Access,Host portion (IPv4) / Interface ID (IPv6),The remaining part of the address identifies a specific device within the group. This portion is unique for each device on the network.,HIGH
+190,Module 3 — Protocols and Models,3.7 Data Access,Default gateway (DGW),The default gateway (DGW) is the router interface IP address that is part of this LAN and will be the “door” or “gateway” to all other remote locations.,HIGH
+191,Module 3 — Protocols and Models,3.7 Data Access,Local MAC addressing,The data link addressing is local addressing so it will have a source and destination for each link.,HIGH

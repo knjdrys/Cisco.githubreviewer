@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ITN Exam Flashcards</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header>
+            <h1>ITN Exam Flashcards</h1>
+            <p>Modules 1 • 2 • 3</p>
+        </header>
+
+        <section class="controls">
+
+            <select id="moduleFilter">
+                <option value="all">All Modules</option>
+                <option value="Module 1">Module 1</option>
+                <option value="Module 2">Module 2</option>
+                <option value="Module 3">Module 3</option>
+            </select>
+
+            <select id="priorityFilter">
+                <option value="all">All Priorities</option>
+                <option value="HIGH">🔥 High Priority</option>
+                <option value="MEDIUM">🟡 Medium Priority</option>
+                <option value="LOW">⚪ Low Priority</option>
+            </select>
+
+            <button id="shuffleBtn">
+                🔀 Shuffle
+            </button>
+
+        </section>
+
+        <section class="progress">
+            <span id="progressText">Loading...</span>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="flashcard-container">
+
+            <div id="flashcard" class="flashcard">
+
+                <div class="card-front">
+                    <span id="topic"></span>
+
+                    <h2 id="term">
+                        Loading...
+                    </h2>
+
+                    <p class="hint">
+                        Click the card to reveal the definition
+                    </p>
+                </div>
+
+                <div class="card-back">
+
+                    <span id="priority"></span>
+
+                    <p id="definition">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="buttons">
+
+            <button id="previousBtn">
+                ← Previous
+            </button>
+
+            <button id="flipBtn">
+                Flip Card
+            </button>
+
+            <button id="nextBtn">
+                Next →
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

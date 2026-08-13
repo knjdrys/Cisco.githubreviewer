@@ -1,0 +1,1534 @@
+{
+  "title": "Cisco Introduction to Networks v7.0 — Modules 1–3 Flashcards",
+  "note": "Definitions are kept as close to the slide wording as possible; priority is a study-priority judgment, not a prediction of actual exam weight.",
+  "cards": [
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.1 Networks Affect Our Lives",
+      "term": "Networks Connect Us",
+      "definition": "In today’s world, through the use of networks, we are connected like never before.",
+      "priority": "MEDIUM",
+      "id": 1
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.1 Networks Affect Our Lives",
+      "term": "Human network",
+      "definition": "Human network",
+      "priority": "LOW",
+      "id": 2
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Host / End device",
+      "definition": "Every computer on a network is called a host or end device.",
+      "priority": "HIGH",
+      "id": 3
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Server",
+      "definition": "Servers are computers that provide information to end devices:",
+      "priority": "HIGH",
+      "id": 4
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Client",
+      "definition": "Clients are computers that send requests to the servers to retrieve information:",
+      "priority": "HIGH",
+      "id": 5
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Peer-to-Peer Network",
+      "definition": "It is possible to have a device be a client and a server in a Peer-to-Peer Network. This type of network design is only recommended for very small networks.",
+      "priority": "HIGH",
+      "id": 6
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "End device",
+      "definition": "An end device is where a message originates from or where it is received. Data originates with an end device, flows through the network, and arrives at an end device.",
+      "priority": "HIGH",
+      "id": 7
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Intermediary device",
+      "definition": "An intermediary device interconnects end devices. Examples include switches, wireless access points, routers, and firewalls.",
+      "priority": "HIGH",
+      "id": 8
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Network media",
+      "definition": "Communication across a network is carried through a medium which allows a message to travel from source to destination.",
+      "priority": "HIGH",
+      "id": 9
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Email server",
+      "definition": "Email server runs email server software. Clients use client software to access email.",
+      "priority": "MEDIUM",
+      "id": 10
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Web server",
+      "definition": "Web server runs web server software. Clients use browser software to access web pages.",
+      "priority": "MEDIUM",
+      "id": 11
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "File server",
+      "definition": "File server stores corporate and user files. The client devices access these files.",
+      "priority": "MEDIUM",
+      "id": 12
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Metal wires within cables",
+      "definition": "Uses electrical impulses.",
+      "priority": "MEDIUM",
+      "id": 13
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Glass or plastic fibers within cables (fiber-optic cable)",
+      "definition": "Uses pulses of light.",
+      "priority": "MEDIUM",
+      "id": 14
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.2 Network Components",
+      "term": "Wireless transmission",
+      "definition": "Uses modulation of specific frequencies of electromagnetic waves.",
+      "priority": "MEDIUM",
+      "id": 15
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.3 Network Representations and Topologies",
+      "term": "Network diagram / topology diagram",
+      "definition": "Network diagrams, often called topology diagrams, use symbols to represent devices within the network.",
+      "priority": "HIGH",
+      "id": 16
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.3 Network Representations and Topologies",
+      "term": "Physical topology diagram",
+      "definition": "Physical topology diagrams illustrate the physical location of intermediary devices and cable installation.",
+      "priority": "HIGH",
+      "id": 17
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.3 Network Representations and Topologies",
+      "term": "Logical topology diagram",
+      "definition": "Logical topology diagrams illustrate devices, ports, and the addressing scheme of the network.",
+      "priority": "HIGH",
+      "id": 18
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.3 Network Representations and Topologies",
+      "term": "Network Interface Card (NIC)",
+      "definition": "Network Interface Card (NIC)",
+      "priority": "MEDIUM",
+      "id": 19
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.3 Network Representations and Topologies",
+      "term": "Physical Port",
+      "definition": "Physical Port",
+      "priority": "MEDIUM",
+      "id": 20
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.3 Network Representations and Topologies",
+      "term": "Interface",
+      "definition": "Interface",
+      "priority": "MEDIUM",
+      "id": 21
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "LAN",
+      "definition": "A LAN is a network infrastructure that spans a small geographical area.",
+      "priority": "HIGH",
+      "id": 22
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "WAN",
+      "definition": "A WAN is a network infrastructure that spans a wide geographical area.",
+      "priority": "HIGH",
+      "id": 23
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "Internet",
+      "definition": "The internet is a worldwide collection of interconnected LANs and WANs.",
+      "priority": "HIGH",
+      "id": 24
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "Small Office/Home Office (SOHO)",
+      "definition": "enables computer within a home or remote office to connect to a corporate network",
+      "priority": "MEDIUM",
+      "id": 25
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "LAN administration",
+      "definition": "Administered by a single organization or individual.",
+      "priority": "MEDIUM",
+      "id": 26
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "WAN administration",
+      "definition": "Typically administered by one or more service providers.",
+      "priority": "MEDIUM",
+      "id": 27
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "Small Home Network",
+      "definition": "connect a few computers to each other and the Internet",
+      "priority": "LOW",
+      "id": 28
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "Medium to Large Networks",
+      "definition": "many locations with hundreds or thousands of interconnected computers",
+      "priority": "LOW",
+      "id": 29
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.4 Common Types of Networks",
+      "term": "World Wide Networks",
+      "definition": "connects hundreds of millions of computers worldwide – such as the internet",
+      "priority": "LOW",
+      "id": 30
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Converged network",
+      "definition": "Converged data networks carry multiple services on one link including: data, voice, video.",
+      "priority": "HIGH",
+      "id": 31
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Cable",
+      "definition": "high bandwidth, always on, internet offered by cable television service providers.",
+      "priority": "MEDIUM",
+      "id": 32
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "DSL",
+      "definition": "high bandwidth, always on, internet connection that runs over a telephone line.",
+      "priority": "MEDIUM",
+      "id": 33
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Cellular",
+      "definition": "uses a cell phone network to connect to the internet.",
+      "priority": "MEDIUM",
+      "id": 34
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Satellite",
+      "definition": "major benefit to rural areas without Internet Service Providers.",
+      "priority": "MEDIUM",
+      "id": 35
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Dedicated Leased Line",
+      "definition": "These are reserved circuits within the service provider’s network that connect distant offices with private voice and/or data networking.",
+      "priority": "MEDIUM",
+      "id": 36
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Ethernet WAN",
+      "definition": "This extends LAN access technology into the WAN.",
+      "priority": "MEDIUM",
+      "id": 37
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.5 Internet Connections",
+      "term": "Dial-up telephone",
+      "definition": "an inexpensive, low bandwidth option using a modem.",
+      "priority": "LOW",
+      "id": 38
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.6 Reliable Networks",
+      "term": "Network Architecture",
+      "definition": "Network Architecture refers to the technologies that support the infrastructure that moves data across the network.",
+      "priority": "HIGH",
+      "id": 39
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.6 Reliable Networks",
+      "term": "Fault Tolerance",
+      "definition": "Fault Tolerance",
+      "priority": "HIGH",
+      "id": 40
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.6 Reliable Networks",
+      "term": "Scalability",
+      "definition": "Scalability",
+      "priority": "HIGH",
+      "id": 41
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.6 Reliable Networks",
+      "term": "Quality of Service (QoS)",
+      "definition": "Quality of Service (QoS)",
+      "priority": "HIGH",
+      "id": 42
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.6 Reliable Networks",
+      "term": "Security",
+      "definition": "Security",
+      "priority": "HIGH",
+      "id": 43
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.7 Network Trends",
+      "term": "Bring Your Own Device (BYOD)",
+      "definition": "allows users to use their own devices to access the network.",
+      "priority": "HIGH",
+      "id": 44
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.7 Network Trends",
+      "term": "Cloud computing",
+      "definition": "allows users to access applications, services, and resources over the network.",
+      "priority": "HIGH",
+      "id": 45
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.7 Network Trends",
+      "term": "Online collaboration",
+      "definition": "allows people to work together using network-based tools and services.",
+      "priority": "MEDIUM",
+      "id": 46
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.7 Network Trends",
+      "term": "Video communications",
+      "definition": "allows people to communicate using video over networks.",
+      "priority": "MEDIUM",
+      "id": 47
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.7 Network Trends",
+      "term": "Powerline networking",
+      "definition": "can allow devices to connect to a LAN where data network cables or wireless communications are not a viable option.",
+      "priority": "MEDIUM",
+      "id": 48
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.7 Network Trends",
+      "term": "Wireless Internet Service Provider (WISP)",
+      "definition": "is an ISP that connects subscribers to designated access points or hotspots.",
+      "priority": "MEDIUM",
+      "id": 49
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "Network security",
+      "definition": "Network security is an integral part of networking regardless of the size of the network.",
+      "priority": "HIGH",
+      "id": 50
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "External threats",
+      "definition": "Viruses, worms, and Trojan horses; Spyware and adware; Zero-day attacks; Threat Actor attacks; Denial of service attacks; Data interception and theft; Identity theft",
+      "priority": "HIGH",
+      "id": 51
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "Internal threats",
+      "definition": "lost or stolen devices; accidental misuse by employees; malicious employees",
+      "priority": "HIGH",
+      "id": 52
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "Firewall filtering",
+      "definition": "used to block unauthorized access to the network.",
+      "priority": "HIGH",
+      "id": 53
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "Access control lists (ACL)",
+      "definition": "Access control lists (ACL)",
+      "priority": "HIGH",
+      "id": 54
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "Intrusion prevention systems (IPS)",
+      "definition": "Intrusion prevention systems (IPS)",
+      "priority": "HIGH",
+      "id": 55
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.8 Network Security",
+      "term": "Virtual private networks (VPN)",
+      "definition": "Virtual private networks (VPN)",
+      "priority": "HIGH",
+      "id": 56
+    },
+    {
+      "module": "Module 1 — Networking Today",
+      "topic": "1.9 The IT Professional",
+      "term": "CCNA",
+      "definition": "The Cisco Certified Network Associate (CCNA) certification demonstrates your knowledge of foundational technologies.",
+      "priority": "MEDIUM",
+      "id": 57
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Shell",
+      "definition": "The user interface that allows users to request specific tasks from the computer. These requests can be made either through the CLI or GUI interfaces.",
+      "priority": "HIGH",
+      "id": 58
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Kernel",
+      "definition": "Communicates between the hardware and software of a computer and manages how hardware resources are used to meet software requirements.",
+      "priority": "HIGH",
+      "id": 59
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "GUI",
+      "definition": "A GUI allows the user to interact with the system using an environment of graphical icons, menus, and windows.",
+      "priority": "HIGH",
+      "id": 60
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Console",
+      "definition": "A physical management port used to access a device in order to provide maintenance, such as performing the initial configurations.",
+      "priority": "HIGH",
+      "id": 61
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Secure Shell (SSH)",
+      "definition": "Establishes a secure remote CLI connection to a device, through a virtual interface, over a network.",
+      "priority": "HIGH",
+      "id": 62
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Telnet",
+      "definition": "Establishes an insecure remote CLI connection to a device over the network.",
+      "priority": "HIGH",
+      "id": 63
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Hardware",
+      "definition": "The physical part of a computer including underlying electronics.",
+      "priority": "MEDIUM",
+      "id": 64
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.1 Cisco IOS Access",
+      "term": "Terminal emulation programs",
+      "definition": "Terminal emulation programs are used to connect to a network device by either a console port or by an SSH/Telnet connection.",
+      "priority": "MEDIUM",
+      "id": 65
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "User EXEC Mode",
+      "definition": "Allows access to only a limited number of basic monitoring commands. Identified by the CLI prompt that ends with the > symbol",
+      "priority": "HIGH",
+      "id": 66
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "Privileged EXEC Mode",
+      "definition": "Allows access to all commands and features. Identified by the CLI prompt that ends with the # symbol",
+      "priority": "HIGH",
+      "id": 67
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "Global Configuration Mode",
+      "definition": "Used to access configuration options on the device",
+      "priority": "HIGH",
+      "id": 68
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "Line Configuration Mode",
+      "definition": "Used to configure console, SSH, Telnet or AUX access",
+      "priority": "HIGH",
+      "id": 69
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "Interface Configuration Mode",
+      "definition": "Used to configure a switch port or router interface",
+      "priority": "HIGH",
+      "id": 70
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "enable",
+      "definition": "To move from user EXEC mode to privilege EXEC mode, use the enabled command.",
+      "priority": "HIGH",
+      "id": 71
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "configure terminal",
+      "definition": "To move in and out of global configuration mode, use the configure terminal command.",
+      "priority": "HIGH",
+      "id": 72
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "exit",
+      "definition": "To return to privilege EXEC mode from global configuration mode, use the exit command.",
+      "priority": "HIGH",
+      "id": 73
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.2 IOS Navigation",
+      "term": "end / Ctrl+Z",
+      "definition": "To return to privilege EXEC mode from any subconfiguration mode, use the end command or key combination Ctrl +Z.",
+      "priority": "HIGH",
+      "id": 74
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Keyword",
+      "definition": "This is a specific parameter defined in the operating system (in the figure, ip protocols).",
+      "priority": "HIGH",
+      "id": 75
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Argument",
+      "definition": "This is not predefined; it is a value or variable defined by the user (in the figure, 192.168.10.5).",
+      "priority": "HIGH",
+      "id": 76
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Command syntax",
+      "definition": "The command syntax provides the pattern, or format, that must be used when entering a command.",
+      "priority": "HIGH",
+      "id": 77
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "[x]",
+      "definition": "Square brackets indicate an optional element (keyword or argument).",
+      "priority": "HIGH",
+      "id": 78
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "{x}",
+      "definition": "Braces indicate a required element (keyword or argument).",
+      "priority": "HIGH",
+      "id": 79
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Context-sensitive help",
+      "definition": "Context-sensitive help enables you to quickly find answers to these questions: Which commands are available in each command mode? Which commands start with specific characters or group of characters? Which arguments and keywords are available to particular commands?",
+      "priority": "HIGH",
+      "id": 80
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Command syntax check",
+      "definition": "Command syntax check verifies that a valid command was entered by the user. If the interpreter cannot understand the command being entered, it will provide feedback describing what is wrong with the command.",
+      "priority": "HIGH",
+      "id": 81
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Ctrl-C",
+      "definition": "When in any configuration mode, ends the configuration mode and returns to privileged EXEC mode.",
+      "priority": "HIGH",
+      "id": 82
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Ctrl-Z",
+      "definition": "When in any configuration mode, ends the configuration mode and returns to privileged EXEC mode.",
+      "priority": "HIGH",
+      "id": 83
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Boldface convention",
+      "definition": "Boldface text indicates commands and keywords that you enter literally as shown.",
+      "priority": "MEDIUM",
+      "id": 84
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Italics convention",
+      "definition": "Italic text indicates arguments for which you supply values.",
+      "priority": "MEDIUM",
+      "id": 85
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Command shortening",
+      "definition": "Commands and keywords can be shortened to the minimum number of characters that identify a unique selection.",
+      "priority": "MEDIUM",
+      "id": 86
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Tab",
+      "definition": "Completes a partial command name entry.",
+      "priority": "MEDIUM",
+      "id": 87
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Up Arrow / Ctrl+P",
+      "definition": "Recalls the commands in the history buffer, beginning with the most recent commands.",
+      "priority": "MEDIUM",
+      "id": 88
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Ctrl-Shift-6",
+      "definition": "All-purpose break sequence used to abort DNS lookups, traceroutes, pings, etc.",
+      "priority": "MEDIUM",
+      "id": 89
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "--More-- prompt",
+      "definition": "When a command output produces more text than can be displayed in a terminal window, the IOS will display a “--More--” prompt.",
+      "priority": "MEDIUM",
+      "id": 90
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.3 The Command Structure",
+      "term": "Backspace",
+      "definition": "Erases the character to the left of the cursor.",
+      "priority": "LOW",
+      "id": 91
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "Hostname",
+      "definition": "The first configuration command on any device should be to give it a unique hostname.",
+      "priority": "HIGH",
+      "id": 92
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "Password guidelines",
+      "definition": "Use passwords that are more than eight characters in length; use a combination of upper and lowercase letters, numbers, special characters, and/or numeric sequences; avoid using the same password for all devices; do not use common words because they are easily guessed.",
+      "priority": "HIGH",
+      "id": 93
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "line console 0",
+      "definition": "First enter line console configuration mode using the line console 0 command in global configuration mode.",
+      "priority": "HIGH",
+      "id": 94
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "password password",
+      "definition": "Next, specify the user EXEC mode password using the password password command.",
+      "priority": "HIGH",
+      "id": 95
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "login",
+      "definition": "Finally, enable user EXEC access using the login command.",
+      "priority": "HIGH",
+      "id": 96
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "enable secret password",
+      "definition": "Next, use the enable secret password command.",
+      "priority": "HIGH",
+      "id": 97
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "line vty 0 15",
+      "definition": "First enter line VTY configuration mode using the line vty 0 15 command in global configuration mode.",
+      "priority": "HIGH",
+      "id": 98
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "enable secret",
+      "definition": "The enable secret command is used to secure privileged EXEC mode access.",
+      "priority": "HIGH",
+      "id": 99
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "service password-encryption",
+      "definition": "The service password-encryption command encrypts plaintext passwords in the configuration file.",
+      "priority": "HIGH",
+      "id": 100
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.4 Basic Device Configuration",
+      "term": "banner motd",
+      "definition": "A message-of-the-day (MOTD) banner is used to provide a message to users when they log in to the device.",
+      "priority": "MEDIUM",
+      "id": 101
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.5 Save Configurations",
+      "term": "running-config",
+      "definition": "The running configuration reflects the current configuration of the device.",
+      "priority": "HIGH",
+      "id": 102
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.5 Save Configurations",
+      "term": "startup-config",
+      "definition": "The startup configuration is stored in NVRAM and is used to load the configuration when the device starts.",
+      "priority": "HIGH",
+      "id": 103
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.5 Save Configurations",
+      "term": "copy running-config startup-config",
+      "definition": "Use the copy running-config startup-config command to save the running configuration to the startup configuration.",
+      "priority": "HIGH",
+      "id": 104
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.5 Save Configurations",
+      "term": "erase startup-config",
+      "definition": "The erase startup-config command removes the startup configuration from NVRAM.",
+      "priority": "MEDIUM",
+      "id": 105
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.5 Save Configurations",
+      "term": "reload",
+      "definition": "The reload command reloads the device.",
+      "priority": "MEDIUM",
+      "id": 106
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.6 Ports and Addresses",
+      "term": "IP address",
+      "definition": "IP addresses enable devices to locate one another and establish end-to-end communication on the internet.",
+      "priority": "HIGH",
+      "id": 107
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.6 Ports and Addresses",
+      "term": "MAC address",
+      "definition": "The physical address of a network interface.",
+      "priority": "HIGH",
+      "id": 108
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.6 Ports and Addresses",
+      "term": "Physical address",
+      "definition": "The physical address of a network interface.",
+      "priority": "MEDIUM",
+      "id": 109
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.6 Ports and Addresses",
+      "term": "Logical address",
+      "definition": "A logical address is used to identify a device on a network.",
+      "priority": "MEDIUM",
+      "id": 110
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "Manual IP address configuration",
+      "definition": "To configure an IPv4 address manually on a host, enter the IP address, subnet mask, and default gateway.",
+      "priority": "HIGH",
+      "id": 111
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "DHCP",
+      "definition": "DHCP enables automatic IPv4 address configuration for every end device that is DHCP-enabled.",
+      "priority": "HIGH",
+      "id": 112
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "DHCPv6",
+      "definition": "IPv6 uses DHCPv6 and SLAAC (Stateless Address Autoconfiguration) for dynamic address allocation.",
+      "priority": "HIGH",
+      "id": 113
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "SLAAC",
+      "definition": "IPv6 uses DHCPv6 and SLAAC (Stateless Address Autoconfiguration) for dynamic address allocation.",
+      "priority": "HIGH",
+      "id": 114
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "Switch Virtual Interface (SVI)",
+      "definition": "To access the switch remotely, an IP address and a subnet mask must be configured on the SVI.",
+      "priority": "HIGH",
+      "id": 115
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "interface vlan 1",
+      "definition": "Enter the interface vlan 1 command in global configuration mode.",
+      "priority": "HIGH",
+      "id": 116
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "ip address ip-address subnet-mask",
+      "definition": "Next assign an IPv4 address using the ip address ip-address subnet-mask command.",
+      "priority": "HIGH",
+      "id": 117
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.7 Configure IP Addressing",
+      "term": "no shutdown",
+      "definition": "Finally, enable the virtual interface using the no shutdown command.",
+      "priority": "HIGH",
+      "id": 118
+    },
+    {
+      "module": "Module 2 — Basic Switch and End Device Configuration",
+      "topic": "2.8 Verify Connectivity",
+      "term": "ping",
+      "definition": "The ping command is used to test connectivity on both switches and both PCs.",
+      "priority": "HIGH",
+      "id": 119
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Source (sender)",
+      "definition": "There will be a source (sender).",
+      "priority": "HIGH",
+      "id": 120
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Destination (receiver)",
+      "definition": "There will be a destination (receiver).",
+      "priority": "HIGH",
+      "id": 121
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Channel (media)",
+      "definition": "There will be a channel (media) that provides for the path of communications to occur.",
+      "priority": "HIGH",
+      "id": 122
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Protocol",
+      "definition": "Protocols are the rules that communications will follow.",
+      "priority": "HIGH",
+      "id": 123
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Encoding",
+      "definition": "Encoding is the process of converting information into another acceptable form for transmission.",
+      "priority": "HIGH",
+      "id": 124
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Decoding",
+      "definition": "Decoding reverses this process to interpret the information.",
+      "priority": "HIGH",
+      "id": 125
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Flow Control",
+      "definition": "Manages the rate of data transmission and defines how much information can be sent and the speed at which it can be delivered.",
+      "priority": "HIGH",
+      "id": 126
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Response Timeout",
+      "definition": "Manages how long a device waits when it does not hear a reply from the destination.",
+      "priority": "HIGH",
+      "id": 127
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Access method",
+      "definition": "Determines when someone can send a message.",
+      "priority": "HIGH",
+      "id": 128
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Collision",
+      "definition": "This is when more than one device sends traffic at the same time and the messages become corrupt.",
+      "priority": "HIGH",
+      "id": 129
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Unicast",
+      "definition": "one to one communication",
+      "priority": "HIGH",
+      "id": 130
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Multicast",
+      "definition": "one to many, typically not all",
+      "priority": "HIGH",
+      "id": 131
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.1 The Rules",
+      "term": "Broadcast",
+      "definition": "one to all",
+      "priority": "HIGH",
+      "id": 132
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Network protocol",
+      "definition": "Network protocols define a common set of rules.",
+      "priority": "HIGH",
+      "id": 133
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Network Communications protocols",
+      "definition": "enable two or more devices to communicate over one or more networks",
+      "priority": "HIGH",
+      "id": 134
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Network Security protocols",
+      "definition": "secure data to provide authentication, data integrity, and data encryption",
+      "priority": "HIGH",
+      "id": 135
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Routing protocols",
+      "definition": "enable routers to exchange route information, compare path information, and select best path",
+      "priority": "HIGH",
+      "id": 136
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Addressing",
+      "definition": "Identifies sender and receiver",
+      "priority": "HIGH",
+      "id": 137
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Reliability",
+      "definition": "Provides guaranteed delivery",
+      "priority": "HIGH",
+      "id": 138
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Sequencing",
+      "definition": "Uniquely labels each transmitted segment of data",
+      "priority": "HIGH",
+      "id": 139
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Error Detection",
+      "definition": "Determines if data became corrupted during transmission",
+      "priority": "HIGH",
+      "id": 140
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Application Interface",
+      "definition": "Process-to-process communications between network applications",
+      "priority": "HIGH",
+      "id": 141
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "HTTP",
+      "definition": "Governs the way a web server and a web client interact; Defines content and format",
+      "priority": "HIGH",
+      "id": 142
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "TCP",
+      "definition": "Manages the individual conversations; Provides guaranteed delivery; Manages flow control",
+      "priority": "HIGH",
+      "id": 143
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "IP",
+      "definition": "Delivers messages globally from the sender to the receiver",
+      "priority": "HIGH",
+      "id": 144
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Ethernet",
+      "definition": "Delivers messages from one NIC to another NIC on the same Ethernet Local Area Network (LAN)",
+      "priority": "HIGH",
+      "id": 145
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.2 Protocols",
+      "term": "Service Discovery protocols",
+      "definition": "used for the automatic detection of devices or services",
+      "priority": "MEDIUM",
+      "id": 146
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.3 Protocol Suites",
+      "term": "Protocol suite",
+      "definition": "A group of inter-related protocols necessary to perform a communication function; Sets of rules that work together to help solve a problem",
+      "priority": "HIGH",
+      "id": 147
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.3 Protocol Suites",
+      "term": "TCP/IP protocol suite",
+      "definition": "The most common protocol suite and maintained by the Internet Engineering Task Force (IETF)",
+      "priority": "HIGH",
+      "id": 148
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.3 Protocol Suites",
+      "term": "Open standard protocol suite",
+      "definition": "An open standard protocol suite that is freely available to the public and can be used by any vendor",
+      "priority": "HIGH",
+      "id": 149
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.3 Protocol Suites",
+      "term": "Standards-based protocol suite",
+      "definition": "A standards-based protocol suite that is endorsed by the networking industry and approved by a standards organization to ensure interoperability",
+      "priority": "HIGH",
+      "id": 150
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "Open standards",
+      "definition": "Open standards encourage: interoperability; competition; innovation",
+      "priority": "HIGH",
+      "id": 151
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "Standards organizations",
+      "definition": "vendor-neutral; non-profit organizations; established to develop and promote the concept of open standards.",
+      "priority": "HIGH",
+      "id": 152
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "IAB",
+      "definition": "Responsible for management and development of internet standards",
+      "priority": "HIGH",
+      "id": 153
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "IETF",
+      "definition": "Develops, updates, and maintains internet and TCP/IP technologies",
+      "priority": "HIGH",
+      "id": 154
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "ICANN",
+      "definition": "Coordinates IP address allocation, the management of domain names, and assignment of other information",
+      "priority": "HIGH",
+      "id": 155
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "IANA",
+      "definition": "Oversees and manages IP address allocation, domain name management, and protocol identifiers for ICANN",
+      "priority": "HIGH",
+      "id": 156
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "ISOC",
+      "definition": "Promotes the open development and evolution of internet",
+      "priority": "MEDIUM",
+      "id": 157
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "IRTF",
+      "definition": "Focused on long-term research related to internet and TCP/IP protocols",
+      "priority": "MEDIUM",
+      "id": 158
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "IEEE",
+      "definition": "dedicated to creating standards in power and energy, healthcare, telecommunications, and networking",
+      "priority": "MEDIUM",
+      "id": 159
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "EIA",
+      "definition": "develops standards relating to electrical wiring, connectors, and the 19-inch racks used to mount networking equipment",
+      "priority": "MEDIUM",
+      "id": 160
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "TIA",
+      "definition": "develops communication standards in radio equipment, cellular towers, Voice over IP (VoIP) devices, satellite communications, and more",
+      "priority": "MEDIUM",
+      "id": 161
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.4 Standards Organizations",
+      "term": "ITU-T",
+      "definition": "defines standards for video compression, Internet Protocol Television (IPTV), and broadband communications, such as a digital subscriber line (DSL)",
+      "priority": "MEDIUM",
+      "id": 162
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "Layered model",
+      "definition": "Complex concepts such as how a network operates can be difficult to explain and understand. For this reason, a layered model is used.",
+      "priority": "HIGH",
+      "id": 163
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Reference Model",
+      "definition": "Open System Interconnection (OSI) Reference Model",
+      "priority": "HIGH",
+      "id": 164
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "TCP/IP Reference Model",
+      "definition": "TCP/IP Reference Model",
+      "priority": "HIGH",
+      "id": 165
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 7 — Application",
+      "definition": "Contains protocols used for process-to-process communications.",
+      "priority": "HIGH",
+      "id": 166
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 6 — Presentation",
+      "definition": "Provides for common representation of the data transferred between application layer services.",
+      "priority": "HIGH",
+      "id": 167
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 5 — Session",
+      "definition": "Provides services to the presentation layer and to manage data exchange.",
+      "priority": "HIGH",
+      "id": 168
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 4 — Transport",
+      "definition": "Defines services to segment, transfer, and reassemble the data for individual communications.",
+      "priority": "HIGH",
+      "id": 169
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 3 — Network",
+      "definition": "Provides services to exchange the individual pieces of data over the network.",
+      "priority": "HIGH",
+      "id": 170
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 2 — Data Link",
+      "definition": "Describes methods for exchanging data frames over a common media.",
+      "priority": "HIGH",
+      "id": 171
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "OSI Layer 1 — Physical",
+      "definition": "Describes the means to activate, maintain, and de-activate physical connections.",
+      "priority": "HIGH",
+      "id": 172
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "TCP/IP Application layer",
+      "definition": "Represents data to the user, plus encoding and dialog control.",
+      "priority": "HIGH",
+      "id": 173
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "TCP/IP Transport layer",
+      "definition": "Supports communication between various devices across diverse networks.",
+      "priority": "HIGH",
+      "id": 174
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "TCP/IP Internet layer",
+      "definition": "Determines the best path through the network.",
+      "priority": "HIGH",
+      "id": 175
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.5 Reference Models",
+      "term": "TCP/IP Network Access layer",
+      "definition": "Controls the hardware devices and media that make up the network.",
+      "priority": "HIGH",
+      "id": 176
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "Segmenting",
+      "definition": "Segmenting is the process of breaking up messages into smaller units.",
+      "priority": "HIGH",
+      "id": 177
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "Multiplexing",
+      "definition": "Multiplexing is the processes of taking multiple streams of segmented data and interleaving them together.",
+      "priority": "HIGH",
+      "id": 178
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "Sequencing",
+      "definition": "Sequencing messages is the process of numbering the segments so that the message may be reassembled at the destination.",
+      "priority": "HIGH",
+      "id": 179
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "Encapsulation",
+      "definition": "Encapsulation is the process where protocols add their information to the data.",
+      "priority": "HIGH",
+      "id": 180
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "Protocol Data Unit (PDU)",
+      "definition": "The form that a piece of data takes at any layer is called a protocol data unit (PDU).",
+      "priority": "HIGH",
+      "id": 181
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "PDU order",
+      "definition": "Data (Data Stream) → Segment → Packet → Frame → Bits (Bit Stream)",
+      "priority": "HIGH",
+      "id": 182
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.6 Data Encapsulation",
+      "term": "De-encapsulation",
+      "definition": "Data is de-encapsulated as it moves up the stack.",
+      "priority": "HIGH",
+      "id": 183
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Network layer addresses",
+      "definition": "Responsible for delivering the IP packet from original source to the final destination.",
+      "priority": "HIGH",
+      "id": 184
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Data link layer addresses",
+      "definition": "Responsible for delivering the data link frame from one network interface card (NIC) to another NIC on the same network.",
+      "priority": "HIGH",
+      "id": 185
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Source IP address",
+      "definition": "The IP address of the sending device, original source of the packet.",
+      "priority": "HIGH",
+      "id": 186
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Destination IP address",
+      "definition": "The IP address of the receiving device, final destination of the packet.",
+      "priority": "HIGH",
+      "id": 187
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Network portion (IPv4) / Prefix (IPv6)",
+      "definition": "The left-most part of the address indicates the network group which the IP address is a member. Each LAN or WAN will have the same network portion.",
+      "priority": "HIGH",
+      "id": 188
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Host portion (IPv4) / Interface ID (IPv6)",
+      "definition": "The remaining part of the address identifies a specific device within the group. This portion is unique for each device on the network.",
+      "priority": "HIGH",
+      "id": 189
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Default gateway (DGW)",
+      "definition": "The default gateway (DGW) is the router interface IP address that is part of this LAN and will be the “door” or “gateway” to all other remote locations.",
+      "priority": "HIGH",
+      "id": 190
+    },
+    {
+      "module": "Module 3 — Protocols and Models",
+      "topic": "3.7 Data Access",
+      "term": "Local MAC addressing",
+      "definition": "The data link addressing is local addressing so it will have a source and destination for each link.",
+      "priority": "HIGH",
+      "id": 191
+    }
+  ]
+}
