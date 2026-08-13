@@ -1,8 +1,7 @@
 /* =========================================================
    ITN EXAM REVIEWER
    Flashcards + Multiple Choice Quiz
-   Compatible with:
-   ITN_Modules_1-3_Flashcards.json
+   OFFLINE / PWA COMPATIBLE
    ========================================================= */
 
 let allCards = [];
@@ -47,18 +46,6 @@ function getPriorityLabel(priority) {
 }
 
 
-/*
-  Your JSON uses values such as:
-
-  Module 1 — Networking Today
-
-  Module 2 — Basic Switch and End Device Configuration
-
-  Module 3 — Protocols and Models
-
-  This extracts only "Module 1", "Module 2", etc.
-*/
-
 function getModuleNumber(moduleName) {
   const match = String(moduleName || "")
     .match(/^Module\s+[123]/i);
@@ -77,23 +64,38 @@ async function loadCards() {
 
   try {
 
+    /*
+      The Service Worker caches this file.
+
+      IMPORTANT:
+      We intentionally do NOT use:
+
+      cache: "no-store"
+
+      because the website needs to be able to
+      retrieve the cached JSON when offline.
+    */
+
     const response = await fetch(
-      "ITN_Modules_1-3_Flashcards.json",
-      {
-        cache: "no-store"
-      }
+      "ITN_Modules_1-3_Flashcards.json"
     );
 
+
     if (!response.ok) {
+
       throw new Error(
         `HTTP error ${response.status}`
       );
+
     }
 
-    const data = await response.json();
+
+    const data =
+      await response.json();
+
 
     /*
-      YOUR JSON FORMAT:
+      Expected JSON format:
 
       {
         "title": "...",
@@ -106,22 +108,31 @@ async function loadCards() {
     */
 
     if (!Array.isArray(data.cards)) {
+
       throw new Error(
         "The JSON does not contain a valid cards array."
       );
+
     }
 
-    allCards = data.cards;
 
-    filteredCards = [...allCards];
+    allCards =
+      data.cards;
+
+
+    filteredCards =
+      [...allCards];
+
 
     console.log(
       `Loaded ${allCards.length} flashcards.`
     );
 
+
     updateQuizStats();
 
     renderFlashcard();
+
 
   } catch (error) {
 
@@ -130,13 +141,32 @@ async function loadCards() {
       error
     );
 
+
     $("flashTerm").textContent =
       "Unable to load flashcards.";
 
+
     $("flashDefinition").textContent =
-      "Make sure ITN_Modules_1-3_Flashcards.json is in the same GitHub folder as index.html.";
+      "The flashcard data could not be loaded. Open the website online once so the files can be cached for offline use.";
+
+
+    $("flashTopic").textContent =
+      "";
+
+
+    $("flashBackTopic").textContent =
+      "";
+
+
+    $("flashPriority").textContent =
+      "—";
+
+
+    $("flashProgress").textContent =
+      "0 / 0";
 
   }
+
 }
 
 
@@ -151,31 +181,51 @@ function renderFlashcard() {
     $("flashTerm").textContent =
       "No flashcards found.";
 
+
     $("flashDefinition").textContent =
       "Try changing your filters.";
 
-    $("flashTopic").textContent = "";
-    $("flashBackTopic").textContent = "";
 
-    $("flashPriority").textContent = "—";
+    $("flashTopic").textContent =
+      "";
+
+
+    $("flashBackTopic").textContent =
+      "";
+
+
+    $("flashPriority").textContent =
+      "—";
+
 
     $("flashProgress").textContent =
       "0 / 0";
 
+
     $("flashProgressFill").style.width =
       "0%";
 
+
     return;
+
   }
 
 
-  if (flashIndex >= filteredCards.length) {
+  if (
+    flashIndex >=
+    filteredCards.length
+  ) {
+
     flashIndex = 0;
+
   }
+
 
   if (flashIndex < 0) {
+
     flashIndex =
       filteredCards.length - 1;
+
   }
 
 
@@ -192,21 +242,26 @@ function renderFlashcard() {
 
 
   $("flashDefinition").textContent =
-    card.definition || "No definition available.";
+    card.definition ||
+    "No definition available.";
 
 
   const topic =
     `${card.module || ""} • ${card.topic || ""}`;
 
+
   $("flashTopic").textContent =
     topic;
+
 
   $("flashBackTopic").textContent =
     topic;
 
 
   $("flashPriority").textContent =
-    getPriorityLabel(card.priority);
+    getPriorityLabel(
+      card.priority
+    );
 
 
   $("flashProgress").textContent =
@@ -217,6 +272,7 @@ function renderFlashcard() {
     ((flashIndex + 1) /
       filteredCards.length) * 100;
 
+
   $("flashProgressFill").style.width =
     `${percentage}%`;
 
@@ -224,6 +280,7 @@ function renderFlashcard() {
   $("flashcard")
     .classList
     .remove("flipped");
+
 }
 
 
@@ -238,26 +295,36 @@ function flipCard() {
 
 function nextCard() {
 
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) {
+    return;
+  }
+
 
   flashIndex =
     (flashIndex + 1) %
     filteredCards.length;
 
+
   renderFlashcard();
+
 }
 
 
 function previousCard() {
 
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) {
+    return;
+  }
+
 
   flashIndex =
     (flashIndex - 1 +
       filteredCards.length) %
     filteredCards.length;
 
+
   renderFlashcard();
+
 }
 
 
@@ -266,9 +333,12 @@ function shuffleCards() {
   filteredCards =
     shuffle(filteredCards);
 
+
   flashIndex = 0;
 
+
   renderFlashcard();
+
 }
 
 
@@ -280,6 +350,7 @@ function getFilteredCards() {
 
   const moduleFilter =
     $("moduleFilter").value;
+
 
   const priorityFilter =
     $("priorityFilter").value;
@@ -303,7 +374,9 @@ function getFilteredCards() {
       moduleMatch &&
       priorityMatch
     );
+
   });
+
 }
 
 
@@ -312,11 +385,15 @@ function applyFilters() {
   filteredCards =
     getFilteredCards();
 
+
   flashIndex = 0;
+
 
   renderFlashcard();
 
+
   updateQuizStats();
+
 }
 
 
@@ -362,6 +439,7 @@ function updateQuizStats() {
       card =>
         card.priority === "HIGH"
     ).length;
+
 }
 
 
@@ -381,7 +459,9 @@ function createQuiz() {
       "You need at least 4 flashcards for a multiple-choice quiz."
     );
 
+
     return false;
+
   }
 
 
@@ -416,11 +496,6 @@ function createQuiz() {
   quizQuestions =
     selectedCards.map(card => {
 
-      /*
-        Get other definitions to use
-        as incorrect answers.
-      */
-
       const wrongAnswers =
         shuffle(
           sourceCards.filter(other => {
@@ -435,20 +510,31 @@ function createQuiz() {
         )
         .slice(0, 3)
         .map(other => ({
-          text: other.definition,
-          correct: false
+
+          text:
+            other.definition,
+
+          correct:
+            false
+
         }));
 
 
       const correctAnswer = {
-        text: card.definition,
-        correct: true
+
+        text:
+          card.definition,
+
+        correct:
+          true
+
       };
 
 
       return {
 
-        card: card,
+        card:
+          card,
 
         answers:
           shuffle([
@@ -469,6 +555,7 @@ function createQuiz() {
 
 
   return true;
+
 }
 
 
@@ -499,6 +586,7 @@ function startQuiz() {
 
 
   renderQuizQuestion();
+
 }
 
 
@@ -513,8 +601,11 @@ function renderQuizQuestion() {
 
 
   if (!question) {
+
     finishQuiz();
+
     return;
+
   }
 
 
@@ -548,20 +639,12 @@ function renderQuizQuestion() {
     );
 
 
-  /*
-    The TERM becomes the question.
-
-    Example:
-
-    "Which definition matches
-    'Host / End device'?"
-  */
-
   $("quizQuestion").textContent =
     `Which definition matches "${question.card.term}"?`;
 
 
-  $("answers").innerHTML = "";
+  $("answers").innerHTML =
+    "";
 
 
   const letters = [
@@ -576,32 +659,47 @@ function renderQuizQuestion() {
     (answer, index) => {
 
       const button =
-        document.createElement("button");
+        document.createElement(
+          "button"
+        );
+
 
       button.className =
         "answer";
 
 
       const letter =
-        document.createElement("span");
+        document.createElement(
+          "span"
+        );
+
 
       letter.className =
         "letter";
+
 
       letter.textContent =
         letters[index];
 
 
       const text =
-        document.createElement("span");
+        document.createElement(
+          "span"
+        );
+
 
       text.textContent =
         answer.text;
 
 
-      button.appendChild(letter);
+      button.appendChild(
+        letter
+      );
 
-      button.appendChild(text);
+
+      button.appendChild(
+        text
+      );
 
 
       button.addEventListener(
@@ -630,6 +728,7 @@ function renderQuizQuestion() {
 
   $("nextQuestionBtn").disabled =
     true;
+
 }
 
 
@@ -654,12 +753,16 @@ function selectAnswer(selectedIndex) {
   const buttons =
     [
       ...$("answers")
-        .querySelectorAll(".answer")
+        .querySelectorAll(
+          ".answer"
+        )
     ];
 
 
   buttons.forEach(button => {
+
     button.disabled = true;
+
   });
 
 
@@ -717,6 +820,7 @@ function selectAnswer(selectedIndex) {
 
   $("nextQuestionBtn").disabled =
     false;
+
 }
 
 
@@ -742,10 +846,12 @@ function nextQuestion() {
     finishQuiz();
 
     return;
+
   }
 
 
   renderQuizQuestion();
+
 }
 
 
@@ -806,6 +912,7 @@ function finishQuiz() {
 
   $("resultText").textContent =
     `You scored ${quizScore} out of ${total}. Review the material and try again.`;
+
 }
 
 
@@ -860,6 +967,7 @@ function showFlashcards() {
         .add("hidden");
 
     });
+
 }
 
 
@@ -915,10 +1023,6 @@ function showQuiz() {
     });
 
 
-  /*
-    Show quiz start screen.
-  */
-
   $("quizGame")
     .classList
     .add("hidden");
@@ -935,6 +1039,7 @@ function showQuiz() {
 
 
   updateQuizStats();
+
 }
 
 
@@ -967,6 +1072,7 @@ function toggleTheme() {
     isLight
       ? "☀"
       : "☾";
+
 }
 
 
@@ -1119,7 +1225,9 @@ $("reviewHighBtn")
       $("priorityFilter").value =
         "HIGH";
 
+
       applyFilters();
+
 
       showFlashcards();
 
@@ -1144,22 +1252,17 @@ document.addEventListener(
   "keydown",
   event => {
 
-    /*
-      Don't trigger shortcuts while
-      selecting from a dropdown.
-    */
-
     if (
       event.target.tagName ===
       "SELECT"
     ) {
+
       return;
+
     }
 
 
-    /*
-      Flashcard controls
-    */
+    /* Flashcard controls */
 
     if (
       currentMode ===
@@ -1197,15 +1300,13 @@ document.addEventListener(
 
       }
 
+
       return;
+
     }
 
 
-    /*
-      Quiz:
-      Enter = next question
-      after answering.
-    */
+    /* Quiz */
 
     if (
       currentMode ===
