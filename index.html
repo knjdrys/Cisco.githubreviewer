@@ -589,61 +589,89 @@
 
 
 
-        <!-- QUIZ RESULT -->
-        <div
+        <!-- ========================= -->
+<!-- QUIZ RESULT -->
+<!-- ========================= -->
+
+<div
   id="quizResult"
   class="quiz-result hidden"
 >
 
-          <div class="result-icon">
-            🎉
-          </div>
+  <div class="result-icon">
+    🎉
+  </div>
+
+  <p class="eyebrow">
+    QUIZ COMPLETE
+  </p>
+
+  <h2 id="resultTitle">
+    Great job!
+  </h2>
 
 
-          <p class="eyebrow">
-            QUIZ COMPLETE
-          </p>
+  <div class="score-circle">
+
+    <strong id="finalScore">
+      0%
+    </strong>
+
+  </div>
 
 
-          <h2 id="resultTitle">
-            Great job!
-          </h2>
+  <p id="resultText"></p>
 
 
+  <!-- MISTAKE REVIEW -->
+  <div
+    id="mistakeReviewBox"
+    class="mistake-review-box hidden"
+  >
 
-          <div class="score-circle">
+    <div class="mistake-review-icon">
+      🔥
+    </div>
 
-            <strong id="finalScore">
-              0%
-            </strong>
+    <h3>
+      Mistake Review
+    </h3>
 
-          </div>
+    <p id="mistakeReviewText">
+      You have questions that need another review.
+    </p>
 
+    <button
+      id="reviewMistakesBtn"
+      class="primary-btn"
+    >
+      🔥 Review My Mistakes
+    </button>
 
-          <p id="resultText"></p>
-
-
-
-          <div class="result-actions">
-
-            <button
-              id="retryQuizBtn"
-              class="primary-btn"
-            >
-              🔄 Try Again
-            </button>
+  </div>
 
 
-            <button
-              id="reviewHighBtn"
-              class="secondary-btn"
-            >
-              🔥 Study High Priority
-            </button>
+  <!-- RESULT ACTIONS -->
+  <div class="result-actions">
 
-          </div>
+    <button
+      id="retryQuizBtn"
+      class="primary-btn"
+    >
+      🔄 Try Again
+    </button>
 
-        </div>
+
+    <button
+      id="reviewHighBtn"
+      class="secondary-btn"
+    >
+      🔥 Study High Priority
+    </button>
+
+  </div>
+
+</div>
 
       </section>
 
