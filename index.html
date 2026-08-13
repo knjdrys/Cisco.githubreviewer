@@ -2,14 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#0b1220">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0b1220"
+  >
+
+  <!-- PWA / OFFLINE SUPPORT -->
+  <link
+    rel="manifest"
+    href="manifest.json"
+  >
+
+  <meta
+    name="mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="ITN Reviewer"
+  >
 
   <title>ITN Exam Reviewer</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
+
 
 <body>
 
@@ -19,6 +56,7 @@
     <header class="topbar">
 
       <div>
+
         <p class="eyebrow">
           CISCO INTRODUCTION TO NETWORKS
         </p>
@@ -30,7 +68,9 @@
         <p class="subtitle">
           Modules 1 • 2 • 3 · 191 source-based flashcards
         </p>
+
       </div>
+
 
       <button
         id="themeBtn"
@@ -43,6 +83,7 @@
     </header>
 
 
+
     <!-- MODE TABS -->
     <nav class="mode-tabs">
 
@@ -52,6 +93,7 @@
       >
         📚 Flashcards
       </button>
+
 
       <button
         class="mode-tab"
@@ -63,10 +105,12 @@
     </nav>
 
 
+
     <!-- FILTERS -->
     <section class="panel filters">
 
       <div class="filter-grid">
+
 
         <!-- MODULE -->
         <label>
@@ -98,6 +142,7 @@
         </label>
 
 
+
         <!-- PRIORITY -->
         <label>
 
@@ -126,6 +171,7 @@
           </select>
 
         </label>
+
 
 
         <!-- QUIZ QUESTION COUNT -->
@@ -170,6 +216,7 @@
       </div>
 
 
+
       <!-- FILTER BUTTONS -->
       <div class="filter-actions">
 
@@ -201,6 +248,7 @@
     </section>
 
 
+
     <!-- MAIN CONTENT -->
     <main>
 
@@ -213,6 +261,7 @@
         id="flashcardsView"
         class="view"
       >
+
 
         <!-- STATUS -->
         <div class="status-row">
@@ -240,12 +289,14 @@
         </div>
 
 
+
         <!-- FLASHCARD -->
         <div
           id="flashcard"
           class="flashcard"
           tabindex="0"
         >
+
 
           <!-- FRONT -->
           <div class="face front">
@@ -255,15 +306,18 @@
               class="topic-label"
             ></span>
 
+
             <h2 id="flashTerm">
               Loading...
             </h2>
+
 
             <p class="tap-hint">
               Click or press Space to reveal the definition
             </p>
 
           </div>
+
 
 
           <!-- BACK -->
@@ -274,13 +328,16 @@
               class="topic-label"
             ></span>
 
+
             <h2 id="flashBackTerm"></h2>
+
 
             <p id="flashDefinition"></p>
 
           </div>
 
         </div>
+
 
 
         <!-- PROGRESS -->
@@ -292,6 +349,7 @@
           ></div>
 
         </div>
+
 
 
         <!-- NAVIGATION -->
@@ -351,14 +409,17 @@
             📝
           </div>
 
+
           <h2>
             Multiple-Choice Quiz
           </h2>
+
 
           <p>
             Questions are generated from the flashcards
             in your uploaded Modules 1–3 dataset.
           </p>
+
 
 
           <!-- QUIZ INFORMATION -->
@@ -405,6 +466,7 @@
           </div>
 
 
+
           <button
             id="beginQuizBtn"
             class="primary-btn large-btn"
@@ -421,6 +483,7 @@
           id="quizGame"
           class="hidden"
         >
+
 
           <!-- QUIZ HEADER -->
           <div class="quiz-header">
@@ -453,6 +516,7 @@
           </div>
 
 
+
           <!-- QUIZ PROGRESS -->
           <div class="progress-track">
 
@@ -462,6 +526,7 @@
             ></div>
 
           </div>
+
 
 
           <!-- QUESTION -->
@@ -488,11 +553,13 @@
             </h2>
 
 
+
             <!-- ANSWERS -->
             <div
               id="answers"
               class="answers"
             ></div>
+
 
 
             <!-- FEEDBACK -->
@@ -502,6 +569,7 @@
             ></div>
 
           </div>
+
 
 
           <!-- NEXT QUESTION -->
@@ -531,13 +599,16 @@
             🎉
           </div>
 
+
           <p class="eyebrow">
             QUIZ COMPLETE
           </p>
 
+
           <h2 id="resultTitle">
             Great job!
           </h2>
+
 
 
           <div class="score-circle">
@@ -550,6 +621,7 @@
 
 
           <p id="resultText"></p>
+
 
 
           <div class="result-actions">
@@ -578,6 +650,7 @@
     </main>
 
 
+
     <!-- FOOTER -->
     <footer>
 
@@ -594,8 +667,43 @@
   </div>
 
 
+
   <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+
+
+
+  <!-- OFFLINE / SERVICE WORKER -->
+  <script>
+
+    if ("serviceWorker" in navigator) {
+
+      window.addEventListener("load", () => {
+
+        navigator.serviceWorker
+          .register("./sw.js")
+          .then((registration) => {
+
+            console.log(
+              "Offline mode enabled.",
+              registration
+            );
+
+          })
+          .catch((error) => {
+
+            console.error(
+              "Service Worker registration failed:",
+              error
+            );
+
+          });
+
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
